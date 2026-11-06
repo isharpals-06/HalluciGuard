@@ -120,6 +120,7 @@ def test_frontend_routes_and_favicon(client):
         response = client.get(route)
         assert response.status_code == 200
         assert marker in response.text
+        assert "LOCAL RESEARCH DEMO" not in response.text
 
     favicon = client.get("/static/favicon.svg")
     assert favicon.status_code == 200

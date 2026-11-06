@@ -2,9 +2,25 @@
 
 > **Explainable Open Knowledge Format-Based LLM Hallucination Detection and Verification Framework**
 
-[![Status](https://img.shields.io/badge/Status-Research%20Prototype%20(partial)-orange)](.) [![Python](https://img.shields.io/badge/Python-3.11-blue)](.) [![Tests](https://img.shields.io/badge/Tests-38%2F38%20Passing-success)](.) [![SafeTensors](https://img.shields.io/badge/Security-SafeTensors%20Loaded-green)](.) [![License](https://img.shields.io/badge/License-MIT-green)](./LICENSE)
+[![Status](https://img.shields.io/badge/Status-Research%20Prototype%20(partial)-orange)](.) [![Python](https://img.shields.io/badge/Python-3.11-blue)](.) [![Tests](https://img.shields.io/badge/Tests-40%2F40%20Passing-success)](.) [![SafeTensors](https://img.shields.io/badge/Security-SafeTensors%20Loaded-green)](.) [![License](https://img.shields.io/badge/License-MIT-green)](./LICENSE)
 
-> **Current status (2026-11-05):** This README includes historical design and aspirational criteria; it is not a claim that all listed research work is complete. The active runtime uses rule-based NLI and TF-IDF retrieval in the tested environment. Current code status, reproducible custom-benchmark results, and remaining gaps are in [`documentation/IMPLEMENTATION_STATUS.md`](documentation/IMPLEMENTATION_STATUS.md) and [`documentation/RESEARCH_REPORT.md`](documentation/RESEARCH_REPORT.md). The sample JSON below is illustrative, not a saved model output. The latest test run was 38/38 passing; external benchmarks and a full perturbation study have not been run.
+> **Current status (2026-11-06):** This README retains historical design material and aspirational criteria; those sections are not claims of completed functionality. The runnable app uses rule-based NLI and TF-IDF retrieval in the tested environment. It includes a public landing page and separate verification, evaluation, knowledge, and architecture screens. Current custom-benchmark results and research limitations are in [`documentation/IMPLEMENTATION_STATUS.md`](documentation/IMPLEMENTATION_STATUS.md) and [`documentation/RESEARCH_REPORT.md`](documentation/RESEARCH_REPORT.md). The sample JSON below is illustrative. The current suite has 40 passing tests; external benchmark datasets and a full perturbation study have not been run.
+
+### Current runnable frontend
+
+The app is served by FastAPI and uses plain HTML, CSS, and JavaScript; it does not require a separate Node or React build. The landing page and app routes are:
+
+| Route | Screen |
+|---|---|
+| `/` | Public product landing page |
+| `/dashboard/verify` | Live claim verification with expandable evidence details |
+| `/dashboard/evaluation` | Current saved-run metrics, confusion matrix, calibration and risk-coverage plots, and a separately labeled exploratory ablation artifact when present |
+| `/dashboard/knowledge` | Searchable and filterable local OKF knowledge artifacts |
+| `/dashboard/architecture` | Implemented pipeline and active runtime modes |
+
+The research app has a responsive monochrome sidebar and a shared SVG evidence-mark favicon/wordmark icon. Verification submits to `POST /api/verify`; evaluation and knowledge screens read saved local artifacts through the API. The UI identifies the current evaluation as preliminary and does not represent the separately saved ablation artifact as part of the current training run.
+
+To start the app locally, run `python -m uvicorn web.app:app --host 127.0.0.1 --port 8000` and open `http://127.0.0.1:8000`.
 
 ---
 
@@ -1007,13 +1023,13 @@ A component is declared useful only if its removal causes statistically signific
 
 | Layer | Technology | Status |
 |---|---|---|
-| Frontend | React + TypeScript | 🔲 Planned |
-| Styling | Vanilla CSS | 🔲 Planned |
+| Frontend | FastAPI-served HTML and vanilla JavaScript | ✅ Implemented |
+| Styling | Responsive monochrome CSS | ✅ Implemented |
 | API Gateway | Nginx or Traefik | 🔲 Planned |
-| Backend Framework | FastAPI (Python 3.11+) | 🔲 Planned |
+| Backend Framework | FastAPI (Python 3.11+) | ✅ Implemented |
 | LLM Interface | OpenAI SDK / HuggingFace Transformers | 🔲 Planned |
-| NLI Model | **TBD** | 🔲 Planned |
-| Embedding Model | **TBD** | 🔲 Planned |
+| NLI | Rule-based active default; optional transformer mode | 🧪 Experimental |
+| Retrieval | TF-IDF active default; optional sentence-transformer mode | 🧪 Experimental |
 | Vector Database | **TBD** (Qdrant / Weaviate / pgvector) | 🔲 Planned |
 | Primary Database | PostgreSQL 15+ | 🔲 Planned |
 | Cache | Redis 7+ | 🔲 Planned |
@@ -1208,17 +1224,17 @@ backend/
 
 ## 26. Frontend
 
-### Dashboard Pages
+The current frontend is served by FastAPI using HTML templates and static CSS/JavaScript. It has a separate public landing page and dedicated research-app routes; it does not use React or require a separate frontend build.
 
-**Page 1 — Analysis Input:** Query input, LLM response input, domain selection, analysis trigger.
+| Route | Current functionality |
+|---|---|
+| `/` | Product overview, implemented capabilities, workflow, and dashboard links |
+| `/dashboard/verify` | Text input, optional query/provider/threshold settings, real API submission, expandable claim results, evidence and provenance, JSON export |
+| `/dashboard/evaluation` | Saved current-run baseline metrics, confusion matrix, risk-coverage and calibration plots, selective operating point, and a clearly separated exploratory ablation artifact if present |
+| `/dashboard/knowledge` | Search and filters over local OKF artifacts, with source, freshness, verification, and reliability metadata |
+| `/dashboard/architecture` | Implemented processing path, active NLI/retrieval modes, and supported output fields |
 
-**Page 2 — Results Overview:** Overall hallucination score (visual indicator), summary metrics (supported/contradicted/unverified counts), per-claim accordion list.
-
-**Page 3 — Claim Detail:** Claim text, classification badge + confidence, evidence panel (expandable), provenance panel (source, timestamp, verification, freshness), signal breakdown (all numeric values), explanation text.
-
-**Page 4 — Analytics Dashboard:** Historical analysis trends, claim type distribution, hallucination pattern analysis, benchmark evaluation metrics (for researchers).
-
-**Page 5 — Knowledge Management (Admin):** OKF knowledge source management, ingestion status, freshness monitoring.
+The visual system uses a white, charcoal, and gray palette with a responsive collapsible icon sidebar. The monochrome SVG evidence mark is used for both the browser favicon and the app/landing wordmark icon. Advanced verification settings are hidden by default. Evaluation values come from saved run artifacts; this is a research prototype, so the small local benchmark and older ablation artifact must be interpreted with their documented limitations.
 
 ---
 
@@ -2003,8 +2019,8 @@ docker compose exec backend python scripts/ingest_knowledge.py --source knowledg
 
 ```bash
 # 1. Clone & enter directory
-git clone https://github.com/your-org/HalluciGuard-OKF.git
-cd HalluciGuard-OKF
+git clone https://github.com/isharpals-06/HalluciGuard.git
+cd HalluciGuard
 
 # 2. Create and activate Python 3.11 virtual environment (via uv)
 uv venv --python 3.11 .venv
@@ -2032,7 +2048,7 @@ python -m uvicorn web.app:app --host 0.0.0.0 --port 8000
 ### Running the Complete Test Suite
 
 ```bash
-# Run all 29 tests (Unit, Adversarial Robustness, and Integration)
+# Run all 40 tests (Unit, Adversarial Robustness, and Integration)
 pytest tests -v
 ```
 

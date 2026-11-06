@@ -83,7 +83,17 @@ def test_web_api_benchmark_endpoint(client):
 
 def test_web_api_verify_endpoint(client):
     """Test POST /api/verify with supported and unverified inputs."""
-    # 1. Supported
+    # Explicit per-request overrides must not poison the cached pipeline default.
+    override = client.post(
+        "/api/verify",
+        json={
+            "text": "The speed of light in a vacuum is exactly 299,792,458 meters per second.",
+            "abstain_threshold": 0.5,
+        },
+    )
+    assert override.status_code == 200
+
+    # Omitted threshold uses the model's saved default on the same cached pipeline.
     res1 = client.post(
         "/api/verify",
         json={"text": "The speed of light in a vacuum is exactly 299,792,458 meters per second."},

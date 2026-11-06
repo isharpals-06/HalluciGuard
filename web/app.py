@@ -42,18 +42,17 @@ app.mount("/static", StaticFiles(directory=str(PROJECT_ROOT / "web" / "static"))
 
 # Global pipeline instance (cached for responsiveness)
 PIPELINE = None
+PIPELINE_PROVIDER = None
 
 
-def get_pipeline(abstain_threshold: Optional[float] = None, provider_name: str = "local") -> HalluciGuardPipeline:
-    global PIPELINE
-    if PIPELINE is None:
+def get_pipeline(provider_name: str = "local") -> HalluciGuardPipeline:
+    global PIPELINE, PIPELINE_PROVIDER
+    normalized_provider = (provider_name or "local").lower().strip()
+    if PIPELINE is None or PIPELINE_PROVIDER != normalized_provider:
         PIPELINE = HalluciGuardPipeline(
-            abstain_threshold=abstain_threshold,
-            provider_name=provider_name,
+            provider_name=normalized_provider,
         )
-    else:
-        PIPELINE.abstain_threshold = abstain_threshold
-        PIPELINE.scorer.abstain_threshold = abstain_threshold
+        PIPELINE_PROVIDER = normalized_provider
     return PIPELINE
 
 
@@ -204,11 +203,12 @@ def verify_text(req: VerifyRequest):
     if not req.text.strip():
         raise HTTPException(status_code=400, detail="Input text cannot be empty.")
 
-    pipeline = get_pipeline(
+    pipeline = get_pipeline(provider_name=req.provider or "local")
+    result = pipeline.analyze(
+        response_text=req.text,
+        query=req.query or "",
         abstain_threshold=req.abstain_threshold,
-        provider_name=req.provider or "local",
     )
-    result = pipeline.analyze(response_text=req.text, query=req.query or "")
     return result
 
 

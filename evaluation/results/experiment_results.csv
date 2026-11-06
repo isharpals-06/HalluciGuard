@@ -1,0 +1,10 @@
+Model / Experiment,Accuracy,Macro F1,Macro Precision,Macro Recall,ECE,Coverage
+Baseline_1_Heuristic,0.9231,0.9153,0.9167,0.9333,0.0796,1.0
+Baseline_2_Neural_MLP_Forced,1.0,1.0,1.0,1.0,0.3837,1.0
+Baseline_3_Full_Benchmark_Forced,0.9643,0.9675,0.9685,0.9669,0.3475,1.0
+Proposed_Selective_Abstention,0.9649,0.9649,0.9649,0.9649,0.3832,0.6786
+Ablation_Full_Model,0.9643,0.9675,0.9685,0.9669,0.3475,1.0
+Ablation_wo_Freshness,0.9524,0.9568,0.9568,0.9568,0.3507,1.0
+Ablation_wo_Provenance,0.9405,0.9415,0.9397,0.9453,0.3923,1.0
+Ablation_Sparse_Only,0.9643,0.9675,0.9685,0.9669,0.3528,1.0
+Ablation_Dense_Only,0.9643,0.9675,0.9685,0.9669,0.3483,1.0

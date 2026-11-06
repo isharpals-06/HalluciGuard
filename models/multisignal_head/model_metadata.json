@@ -1,0 +1,677 @@
+{
+  "model_name": "halluciguard_multisignal_v1",
+  "version": "1.0.0",
+  "timestamp": "2026-11-05T16:03:42.921077+00:00",
+  "random_seed": 42,
+  "input_features": 15,
+  "classes": {
+    "0": "SUPPORTED",
+    "1": "CONTRADICTED",
+    "2": "UNVERIFIED"
+  },
+  "baseline_comparison": {
+    "heuristic_baseline": {
+      "accuracy": 0.7143,
+      "macro_precision": 0.7524,
+      "macro_recall": 0.7778,
+      "macro_f1": 0.6648,
+      "weighted_f1": 0.6915,
+      "expected_calibration_error": 0.2784,
+      "brier_score": 0.4895,
+      "negative_log_likelihood": 0.8929,
+      "macro_pr_auc": 0.8591,
+      "confusion_matrix": [
+        [
+          6,
+          0,
+          0
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "per_class": {
+        "SUPPORTED": {
+          "precision": 0.8571,
+          "recall": 1.0,
+          "f1": 0.9231,
+          "support": 6
+        },
+        "CONTRADICTED": {
+          "precision": 1.0,
+          "recall": 0.3333,
+          "f1": 0.5,
+          "support": 6
+        },
+        "UNVERIFIED": {
+          "precision": 0.4,
+          "recall": 1.0,
+          "f1": 0.5714,
+          "support": 2
+        }
+      }
+    },
+    "nli_only_rule_baseline": {
+      "accuracy": 0.7143,
+      "macro_precision": 0.75,
+      "macro_recall": 0.7778,
+      "macro_f1": 0.6746,
+      "weighted_f1": 0.6769,
+      "expected_calibration_error": 0.2778,
+      "brier_score": 0.4882,
+      "negative_log_likelihood": 0.8913,
+      "macro_pr_auc": 0.8406,
+      "confusion_matrix": [
+        [
+          6,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "per_class": {
+        "SUPPORTED": {
+          "precision": 0.75,
+          "recall": 1.0,
+          "f1": 0.8571,
+          "support": 6
+        },
+        "CONTRADICTED": {
+          "precision": 1.0,
+          "recall": 0.3333,
+          "f1": 0.5,
+          "support": 6
+        },
+        "UNVERIFIED": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "support": 2
+        }
+      }
+    },
+    "logistic_regression_baseline": {
+      "accuracy": 0.8571,
+      "macro_precision": 0.9167,
+      "macro_recall": 0.8889,
+      "macro_f1": 0.8857,
+      "weighted_f1": 0.8531,
+      "expected_calibration_error": 0.1469,
+      "brier_score": 0.1428,
+      "negative_log_likelihood": 0.219,
+      "macro_pr_auc": 1.0,
+      "confusion_matrix": [
+        [
+          6,
+          0,
+          0
+        ],
+        [
+          2,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "per_class": {
+        "SUPPORTED": {
+          "precision": 0.75,
+          "recall": 1.0,
+          "f1": 0.8571,
+          "support": 6
+        },
+        "CONTRADICTED": {
+          "precision": 1.0,
+          "recall": 0.6667,
+          "f1": 0.8,
+          "support": 6
+        },
+        "UNVERIFIED": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 2
+        }
+      }
+    },
+    "proposed_model": {
+      "accuracy": 0.7857,
+      "macro_precision": 0.8889,
+      "macro_recall": 0.8333,
+      "macro_f1": 0.8222,
+      "weighted_f1": 0.7714,
+      "expected_calibration_error": 0.2013,
+      "brier_score": 0.2814,
+      "negative_log_likelihood": 0.4685,
+      "macro_pr_auc": 1.0,
+      "confusion_matrix": [
+        [
+          6,
+          0,
+          0
+        ],
+        [
+          3,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "per_class": {
+        "SUPPORTED": {
+          "precision": 0.6667,
+          "recall": 1.0,
+          "f1": 0.8,
+          "support": 6
+        },
+        "CONTRADICTED": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6667,
+          "support": 6
+        },
+        "UNVERIFIED": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 2
+        }
+      }
+    },
+    "f1_improvement_vs_heuristic": 0.1574,
+    "accuracy_improvement_vs_heuristic": 0.0714
+  },
+  "test_metrics": {
+    "accuracy": 0.7857,
+    "macro_precision": 0.8889,
+    "macro_recall": 0.8333,
+    "macro_f1": 0.8222,
+    "weighted_f1": 0.7714,
+    "expected_calibration_error": 0.2013,
+    "brier_score": 0.2814,
+    "negative_log_likelihood": 0.4685,
+    "macro_pr_auc": 1.0,
+    "confusion_matrix": [
+      [
+        6,
+        0,
+        0
+      ],
+      [
+        3,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        2
+      ]
+    ],
+    "per_class": {
+      "SUPPORTED": {
+        "precision": 0.6667,
+        "recall": 1.0,
+        "f1": 0.8,
+        "support": 6
+      },
+      "CONTRADICTED": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6667,
+        "support": 6
+      },
+      "UNVERIFIED": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 2
+      }
+    }
+  },
+  "validation_metrics": {
+    "accuracy": 0.9286,
+    "macro_precision": 0.8889,
+    "macro_recall": 0.9667,
+    "macro_f1": 0.9158,
+    "weighted_f1": 0.9338,
+    "expected_calibration_error": 0.1539,
+    "brier_score": 0.1227,
+    "negative_log_likelihood": 0.2866,
+    "macro_pr_auc": 1.0,
+    "confusion_matrix": [
+      [
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        9,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ]
+    ],
+    "per_class": {
+      "SUPPORTED": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 2
+      },
+      "CONTRADICTED": {
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1": 0.9474,
+        "support": 10
+      },
+      "UNVERIFIED": {
+        "precision": 0.6667,
+        "recall": 1.0,
+        "f1": 0.8,
+        "support": 2
+      }
+    }
+  },
+  "selective_metrics": {
+    "threshold_selected_on_validation": 0.0,
+    "coverage": 1.0,
+    "accepted_count": 14,
+    "total_count": 14,
+    "selective_risk": 0.21428571428571427,
+    "accuracy": 0.7857142857142857,
+    "accepted_count_by_class": {
+      "SUPPORTED": 6,
+      "CONTRADICTED": 6,
+      "UNVERIFIED": 2
+    },
+    "accepted_coverage_by_class": {
+      "SUPPORTED": 1.0,
+      "CONTRADICTED": 1.0,
+      "UNVERIFIED": 1.0
+    },
+    "aurc": 0.037040495
+  },
+  "prediction_artifacts_path": "evaluation\\results\\current_training_run.json",
+  "error_analysis_samples": [
+    {
+      "claim_id": "C001-2",
+      "claim_text": "Tesla was founded by Elon Musk.",
+      "true_label": "CONTRADICTED",
+      "predicted_label": "SUPPORTED",
+      "confidence": 0.8935115337371826,
+      "predicted_probs": {
+        "SUPPORTED": 0.8935,
+        "CONTRADICTED": 0.0699,
+        "UNVERIFIED": 0.0366
+      },
+      "error_type": "FALSE_NEGATIVE",
+      "hallucination_pattern": "wrong_attribution"
+    },
+    {
+      "claim_id": "C005-1",
+      "claim_text": "The current CEO of Apple is Steve Jobs.",
+      "true_label": "CONTRADICTED",
+      "predicted_label": "SUPPORTED",
+      "confidence": 0.7420396208763123,
+      "predicted_probs": {
+        "SUPPORTED": 0.742,
+        "CONTRADICTED": 0.2064,
+        "UNVERIFIED": 0.0516
+      },
+      "error_type": "FALSE_NEGATIVE",
+      "hallucination_pattern": "wrong_entity"
+    },
+    {
+      "claim_id": "C023-2",
+      "claim_text": "Steve Jobs is the current CEO of Tesla.",
+      "true_label": "CONTRADICTED",
+      "predicted_label": "SUPPORTED",
+      "confidence": 0.6248514652252197,
+      "predicted_probs": {
+        "SUPPORTED": 0.6249,
+        "CONTRADICTED": 0.314,
+        "UNVERIFIED": 0.0611
+      },
+      "error_type": "FALSE_NEGATIVE",
+      "hallucination_pattern": "wrong_entity"
+    }
+  ],
+  "training_history": [
+    {
+      "epoch": 1,
+      "cls_loss": 0.7956,
+      "reg_loss": 0.1448,
+      "val_f1": 0.9158,
+      "val_acc": 0.9286
+    },
+    {
+      "epoch": 2,
+      "cls_loss": 0.4053,
+      "reg_loss": 0.1121,
+      "val_f1": 0.9158,
+      "val_acc": 0.9286
+    },
+    {
+      "epoch": 3,
+      "cls_loss": 0.298,
+      "reg_loss": 0.0754,
+      "val_f1": 0.9158,
+      "val_acc": 0.9286
+    },
+    {
+      "epoch": 4,
+      "cls_loss": 0.1872,
+      "reg_loss": 0.0735,
+      "val_f1": 0.9158,
+      "val_acc": 0.9286
+    },
+    {
+      "epoch": 5,
+      "cls_loss": 0.2165,
+      "reg_loss": 0.0637,
+      "val_f1": 0.9158,
+      "val_acc": 0.9286
+    },
+    {
+      "epoch": 6,
+      "cls_loss": 0.1896,
+      "reg_loss": 0.0546,
+      "val_f1": 0.9158,
+      "val_acc": 0.9286
+    },
+    {
+      "epoch": 7,
+      "cls_loss": 0.1946,
+      "reg_loss": 0.0453,
+      "val_f1": 0.9158,
+      "val_acc": 0.9286
+    },
+    {
+      "epoch": 8,
+      "cls_loss": 0.1837,
+      "reg_loss": 0.0432,
+      "val_f1": 0.9158,
+      "val_acc": 0.9286
+    },
+    {
+      "epoch": 9,
+      "cls_loss": 0.1615,
+      "reg_loss": 0.0404,
+      "val_f1": 0.9158,
+      "val_acc": 0.9286
+    },
+    {
+      "epoch": 10,
+      "cls_loss": 0.1725,
+      "reg_loss": 0.0361,
+      "val_f1": 0.9158,
+      "val_acc": 0.9286
+    },
+    {
+      "epoch": 11,
+      "cls_loss": 0.1578,
+      "reg_loss": 0.0351,
+      "val_f1": 0.9158,
+      "val_acc": 0.9286
+    },
+    {
+      "epoch": 12,
+      "cls_loss": 0.1639,
+      "reg_loss": 0.033,
+      "val_f1": 0.9158,
+      "val_acc": 0.9286
+    },
+    {
+      "epoch": 13,
+      "cls_loss": 0.1257,
+      "reg_loss": 0.0299,
+      "val_f1": 0.9158,
+      "val_acc": 0.9286
+    }
+  ],
+  "reproducibility": {
+    "dataset_path": "datasets\\benchmark\\benchmark_data.json",
+    "dataset_sha256": "4703be9bb2a6f0df14000a3b38952ed65f537fee9c24557c5e922f03f0dfb678",
+    "training_config_sha256": "f3ba65f3571f42735fdc46cc8286cfe3d67bf141c5ab1135cdccd3738fb829cd",
+    "model_config_path": "configs/model_config.yaml",
+    "model_config_sha256": "dc2dcd6a3844f4c173a12a47c87de1726776cf55991ba9e634540dd66594efaa",
+    "source_fingerprint_sha256": "63605326fdb8774fb9fc19051646d8dbecce0a1714f4492f21c1f67e102840d4",
+    "python_version": "3.11.15 (main, Jun 11 2026, 04:59:07) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "nli_mode": "rule_based",
+    "dense_retrieval_mode": "tfidf",
+    "evidence_mode": "retrieval",
+    "top_k": 5,
+    "min_relevance_threshold": 0.35,
+    "seed": 42,
+    "split_ratios": {
+      "train": 0.7,
+      "validation": 0.15,
+      "test": 0.15
+    },
+    "split_grouping": "scenario_id",
+    "split_group_ids": {
+      "train": [
+        "BM-002",
+        "BM-003",
+        "BM-004",
+        "BM-007",
+        "BM-008",
+        "BM-009",
+        "BM-012",
+        "BM-014",
+        "BM-015",
+        "BM-016",
+        "BM-018",
+        "BM-020",
+        "BM-021",
+        "BM-022",
+        "BM-024",
+        "BM-025",
+        "BM-EXP-001",
+        "BM-EXP-002",
+        "BM-EXP-003",
+        "BM-EXP-005",
+        "BM-EXP-006",
+        "BM-EXP-008",
+        "BM-EXP-011",
+        "BM-EXP-012",
+        "BM-EXP-013",
+        "BM-EXP-014",
+        "BM-EXP-016",
+        "BM-EXP-017",
+        "BM-EXP-018",
+        "BM-EXP-019",
+        "BM-EXP-020",
+        "BM-EXP-022",
+        "BM-EXP-024",
+        "BM-EXP-027",
+        "BM-EXP-028",
+        "BM-EXP-029",
+        "BM-EXP-031",
+        "BM-EXP-033",
+        "BM-EXP-034",
+        "BM-EXP-036",
+        "BM-EXP-037",
+        "BM-EXP-039",
+        "BM-EXP-040",
+        "BM-EXP-041",
+        "BM-EXP-042",
+        "BM-EXP-043",
+        "BM-EXP-044",
+        "BM-EXP-045",
+        "BM-EXP-046",
+        "BM-EXP-047"
+      ],
+      "validation": [
+        "BM-006",
+        "BM-017",
+        "BM-019",
+        "BM-EXP-004",
+        "BM-EXP-007",
+        "BM-EXP-010",
+        "BM-EXP-021",
+        "BM-EXP-025",
+        "BM-EXP-030",
+        "BM-EXP-032",
+        "BM-EXP-038"
+      ],
+      "test": [
+        "BM-001",
+        "BM-005",
+        "BM-010",
+        "BM-011",
+        "BM-013",
+        "BM-023",
+        "BM-EXP-009",
+        "BM-EXP-015",
+        "BM-EXP-023",
+        "BM-EXP-026",
+        "BM-EXP-035"
+      ]
+    },
+    "calibration_method": "validation_fitted_temperature_scaling",
+    "posthoc_calibration_method": "temperature_scaling",
+    "posthoc_temperature": 0.5,
+    "calibration_validation_count": 14,
+    "calibration_temperature_at_lower_bound": true,
+    "calibration_temperature_bounds": [
+      0.5,
+      5.0
+    ],
+    "validation_metrics_before_calibration": {
+      "accuracy": 0.9286,
+      "macro_precision": 0.8889,
+      "macro_recall": 0.9667,
+      "macro_f1": 0.9158,
+      "weighted_f1": 0.9338,
+      "expected_calibration_error": 0.3322,
+      "brier_score": 0.2287,
+      "negative_log_likelihood": 0.4863,
+      "macro_pr_auc": 1.0,
+      "confusion_matrix": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          9,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "per_class": {
+        "SUPPORTED": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 2
+        },
+        "CONTRADICTED": {
+          "precision": 1.0,
+          "recall": 0.9,
+          "f1": 0.9474,
+          "support": 10
+        },
+        "UNVERIFIED": {
+          "precision": 0.6667,
+          "recall": 1.0,
+          "f1": 0.8,
+          "support": 2
+        }
+      }
+    },
+    "validation_metrics_after_calibration": {
+      "accuracy": 0.9286,
+      "macro_precision": 0.8889,
+      "macro_recall": 0.9667,
+      "macro_f1": 0.9158,
+      "weighted_f1": 0.9338,
+      "expected_calibration_error": 0.1539,
+      "brier_score": 0.1227,
+      "negative_log_likelihood": 0.2866,
+      "macro_pr_auc": 1.0,
+      "confusion_matrix": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          9,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "per_class": {
+        "SUPPORTED": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 2
+        },
+        "CONTRADICTED": {
+          "precision": 1.0,
+          "recall": 0.9,
+          "f1": 0.9474,
+          "support": 10
+        },
+        "UNVERIFIED": {
+          "precision": 0.6667,
+          "recall": 1.0,
+          "f1": 0.8,
+          "support": 2
+        }
+      }
+    },
+    "abstention_threshold": 0.0,
+    "target_selective_risk": 0.1,
+    "selected_abstention_threshold": 0.0,
+    "validation_selective_operating_point": {
+      "coverage": 1.0,
+      "risk": 0.07142857142857142,
+      "accepted_count": 14,
+      "target_risk": 0.1
+    }
+  }
+}

@@ -1,0 +1,41 @@
+# HalluciGuard-OKF Training Configuration
+experiment:
+  name: "halluciguard_multisignal_v1"
+  seed: 42
+  description: "Training PyTorch Multi-Signal Classification Head with class weighting and calibration"
+
+data:
+  benchmark_path: "datasets/benchmark/benchmark_data.json"
+  knowledge_path: "knowledge/artifacts/curated_knowledge.json"
+  model_config_path: "configs/model_config.yaml"
+  evidence_mode: "retrieval" # oracle_evidence is reserved for separately reported experiments.
+  train_split: 0.70
+  val_split: 0.15
+  test_split: 0.15
+  random_seed: 42
+
+training:
+  epochs: 80
+  batch_size: 16
+  learning_rate: 0.003
+  weight_decay: 0.0001
+  patience: 12 # Early stopping patience
+  min_delta: 0.001
+  target_selective_risk: 0.10
+  loss_type: "weighted_cross_entropy" # Addresses class imbalance
+  optimizer: "AdamW"
+  scheduler: "CosineAnnealingLR"
+  t_max: 80
+  eta_min: 0.00005
+
+model:
+  input_dim: 15
+  hidden_dims: [64, 32]
+  dropout: 0.20
+  num_classes: 3
+
+artifacts:
+  output_dir: "models/multisignal_head"
+  checkpoint_name: "best_model.pt"
+  metadata_name: "model_metadata.json"
+  scaler_name: "feature_scaler.json"

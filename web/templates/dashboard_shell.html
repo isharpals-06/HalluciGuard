@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#fff"><title>{{TITLE}} · HalluciGuard-OKF</title><link rel="icon" type="image/svg+xml" href="/static/favicon.svg?v=2"><link rel="stylesheet" href="/static/app.css"></head>
+<body class="app-body" data-page="{{PAGE}}">
+  <aside class="sidebar" id="sidebar"><a class="sidebar-brand" href="/" aria-label="HalluciGuard home"><img class="brand-mark" src="/static/favicon.svg?v=2" alt=""><span class="sidebar-brand-name">HalluciGuard<small>RESEARCH APP</small></span></a>
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Expand sidebar" aria-expanded="false" title="Expand sidebar"><span aria-hidden="true">☰</span></button>
+    <nav class="side-nav" aria-label="Research application sections">
+      <a class="side-link {{ACTIVE_VERIFY}}" href="/dashboard/verify" title="Live claim verification" aria-label="Live claim verification"><span class="side-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.4"/><path d="m16 16 4.3 4.3"/></svg></span><span class="side-label">Live verification</span></a>
+      <a class="side-link {{ACTIVE_EVALUATION}}" href="/dashboard/evaluation" title="Evaluation and ablation" aria-label="Evaluation and ablation"><span class="side-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19.5h16M6.5 16V10m5.5 6V5m5.5 11v-8"/></svg></span><span class="side-label">Evaluation</span></a>
+      <a class="side-link {{ACTIVE_KNOWLEDGE}}" href="/dashboard/knowledge" title="Knowledge base" aria-label="Knowledge base"><span class="side-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4.5h9l3 3v12H6zM15 4.5v3h3M9 11h6m-6 3h6m-6 3h4"/></svg></span><span class="side-label">Knowledge base</span></a>
+      <a class="side-link {{ACTIVE_ARCHITECTURE}}" href="/dashboard/architecture" title="Architecture" aria-label="Architecture"><span class="side-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="9" y="3.5" width="6" height="5" rx="1"/><rect x="3" y="15.5" width="6" height="5" rx="1"/><rect x="15" y="15.5" width="6" height="5" rx="1"/><path d="M12 8.5v3m-6 4v-4h12v4"/></svg></span><span class="side-label">Architecture</span></a>
+    </nav>
+    <div class="sidebar-bottom"><a class="side-link" href="/" title="Public website" aria-label="Public website"><span class="side-icon" aria-hidden="true">↗</span><span class="side-label">Public website</span></a><div class="profile-mark" aria-label="HalluciGuard research workspace">HG</div></div>
+  </aside>
+  <div class="mobile-scrim" id="mobile-scrim"></div>
+  <div class="app-main"><header class="app-topbar"><button class="mobile-menu icon-button" id="mobile-menu" aria-label="Open navigation">☰</button><div class="breadcrumbs"><a href="/dashboard/verify">Research app</a><span>/</span><strong>{{TITLE}}</strong></div><div class="topbar-meta"><span class="live-dot"></span><span>LOCAL RESEARCH DEMO</span></div></header>
+    <main class="page-content">{{CONTENT}}</main>
+  </div>
+  <script src="/static/app.js" defer></script>
+</body></html>

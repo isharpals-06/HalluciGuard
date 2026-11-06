@@ -1,0 +1,21 @@
+# Calibrated Classification Thresholds & Heuristics
+# Calibrated on held-out validation set
+classification:
+  labels:
+    0: "SUPPORTED"
+    1: "CONTRADICTED"
+    2: "UNVERIFIED"
+
+baseline_heuristic:
+  min_retrieval_sim: 0.35
+  nli_contradiction_threshold: 0.65
+  nli_entailment_threshold: 0.60
+  unverified_coverage_threshold: 0.30
+
+calibrated_thresholds:
+  hallucination_score:
+    low_risk: 0.35
+    medium_risk: 0.65
+    high_risk: 0.85
+  low_confidence_flag_threshold: 0.60
+  stale_flag_discount: 0.30

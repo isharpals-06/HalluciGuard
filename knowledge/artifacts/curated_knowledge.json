@@ -1,0 +1,1281 @@
+[
+  {
+    "identity": {
+      "id": "OKF-BIZ-001",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "Tesla, Inc. was incorporated and founded on July 1, 2003 by Martin Eberhard and Marc Tarpenning in San Carlos, California.",
+      "entity": "Tesla, Inc.",
+      "attribute": "founding_date",
+      "value": "2003-07-01",
+      "category": "business"
+    },
+    "source": {
+      "name": "Tesla Corporate Historical Filings & SEC Record",
+      "url": "https://ir.tesla.com/corporate-governance",
+      "source_type": "primary",
+      "reliability_estimate": 0.98,
+      "license": "Public SEC Records"
+    },
+    "provenance": {
+      "chain": [
+        "State of Delaware Incorporation Records",
+        "SEC Form 10-K Filing 2010"
+      ],
+      "is_primary": true,
+      "recorded_at": "2023-01-01T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": "2003-07-01T00:00:00Z",
+      "valid_until": null,
+      "temporal_scope": "permanent"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 0.99,
+      "verifier": "delaware_division_of_corporations"
+    },
+    "lifecycle": {
+      "freshness_state": "HISTORICAL",
+      "ingested_at": "2024-01-10T12:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-BIZ-002",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "Elon Musk joined Tesla in February 2004 as Chairman of the Board after leading Series A funding, and assumed the role of CEO in October 2008.",
+      "entity": "Elon Musk",
+      "attribute": "ceo_appointment_tesla",
+      "value": "2008-10",
+      "category": "business"
+    },
+    "source": {
+      "name": "Tesla Official Press Release Archive",
+      "url": "https://ir.tesla.com/press-release",
+      "source_type": "primary",
+      "reliability_estimate": 0.98,
+      "license": "Public Domain"
+    },
+    "provenance": {
+      "chain": [
+        "Tesla Board of Directors Resolution Oct 2008",
+        "SEC 8-K Disclosure"
+      ],
+      "is_primary": true,
+      "recorded_at": "2023-01-01T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": "2008-10-01T00:00:00Z",
+      "valid_until": null,
+      "temporal_scope": "current"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 0.99,
+      "verifier": "sec_edgar_audit"
+    },
+    "lifecycle": {
+      "freshness_state": "CURRENT",
+      "ingested_at": "2024-01-10T12:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-TECH-001",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "Apple Inc. was founded on April 1, 1976 by Steve Jobs, Steve Wozniak, and Ronald Wayne in Los Altos, California.",
+      "entity": "Apple Inc.",
+      "attribute": "founding",
+      "value": "1976-04-01",
+      "category": "technology"
+    },
+    "source": {
+      "name": "Apple Corporate Archive and Partnership Agreement",
+      "url": "https://www.apple.com/about",
+      "source_type": "primary",
+      "reliability_estimate": 0.99,
+      "license": "Proprietary Verified"
+    },
+    "provenance": {
+      "chain": [
+        "Original Partnership Agreement April 1 1976",
+        "Library of Congress Archive"
+      ],
+      "is_primary": true,
+      "recorded_at": "2023-01-01T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": "1976-04-01T00:00:00Z",
+      "valid_until": null,
+      "temporal_scope": "permanent"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 0.99,
+      "verifier": "apple_historical_society"
+    },
+    "lifecycle": {
+      "freshness_state": "HISTORICAL",
+      "ingested_at": "2024-01-10T12:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-TECH-002",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "Tim Cook succeeded Steve Jobs as CEO of Apple Inc. on August 24, 2011.",
+      "entity": "Tim Cook",
+      "attribute": "ceo_appointment_apple",
+      "value": "2011-08-24",
+      "category": "technology"
+    },
+    "source": {
+      "name": "Apple Press Release August 2011",
+      "url": "https://www.apple.com/newsroom/2011/08/24Letter-from-Steve-Jobs/",
+      "source_type": "primary",
+      "reliability_estimate": 0.99,
+      "license": "Public Release"
+    },
+    "provenance": {
+      "chain": [
+        "SEC Form 8-K Apple Inc. August 2011"
+      ],
+      "is_primary": true,
+      "recorded_at": "2023-01-01T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": "2011-08-24T00:00:00Z",
+      "valid_until": null,
+      "temporal_scope": "current"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 0.99,
+      "verifier": "sec_audit"
+    },
+    "lifecycle": {
+      "freshness_state": "CURRENT",
+      "ingested_at": "2024-01-10T12:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-POL-001",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "Rishi Sunak served as Prime Minister of the United Kingdom from October 25, 2022 until July 5, 2024.",
+      "entity": "Rishi Sunak",
+      "attribute": "prime_minister_term_uk",
+      "value": "2022-10-25 to 2024-07-05",
+      "category": "politics"
+    },
+    "source": {
+      "name": "UK Parliament and Downing Street Records",
+      "url": "https://www.gov.uk/government/history/past-prime-ministers",
+      "source_type": "primary",
+      "reliability_estimate": 0.99,
+      "license": "Open Government Licence v3.0"
+    },
+    "provenance": {
+      "chain": [
+        "Royal Prerogative Dissolution Records",
+        "Hansard Parliamentary Debates"
+      ],
+      "is_primary": true,
+      "recorded_at": "2024-07-06T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": "2022-10-25T00:00:00Z",
+      "valid_until": "2024-07-05T00:00:00Z",
+      "temporal_scope": "historical"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 0.99,
+      "verifier": "cabinet_office_london"
+    },
+    "lifecycle": {
+      "freshness_state": "STALE",
+      "ingested_at": "2024-07-10T00:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-POL-002",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "Keir Starmer assumed office as Prime Minister of the United Kingdom on July 5, 2024 following the 2024 general election.",
+      "entity": "Keir Starmer",
+      "attribute": "prime_minister_uk",
+      "value": "2024-07-05",
+      "category": "politics"
+    },
+    "source": {
+      "name": "UK Prime Minister Official Office",
+      "url": "https://www.gov.uk/government/ministers/prime-minister",
+      "source_type": "primary",
+      "reliability_estimate": 0.99,
+      "license": "Open Government Licence"
+    },
+    "provenance": {
+      "chain": [
+        "Buckingham Palace Official Notice",
+        "Court Circular July 2024"
+      ],
+      "is_primary": true,
+      "recorded_at": "2024-07-06T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": "2024-07-05T00:00:00Z",
+      "valid_until": null,
+      "temporal_scope": "current"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 0.99,
+      "verifier": "parliament_uk"
+    },
+    "lifecycle": {
+      "freshness_state": "CURRENT",
+      "ingested_at": "2024-07-10T00:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-SCI-001",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "The speed of light in a vacuum is exactly 299,792,458 meters per second.",
+      "entity": "Speed of light",
+      "attribute": "value_vacuum",
+      "value": 299792458,
+      "category": "science"
+    },
+    "source": {
+      "name": "National Institute of Standards and Technology (NIST)",
+      "url": "https://physics.nist.gov/cuu/Constants/",
+      "source_type": "primary",
+      "reliability_estimate": 1.0,
+      "license": "Public Domain"
+    },
+    "provenance": {
+      "chain": [
+        "17th General Conference on Weights and Measures (CGPM) Resolution 1 1983"
+      ],
+      "is_primary": true,
+      "recorded_at": "2020-01-01T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": "1983-10-21T00:00:00Z",
+      "valid_until": null,
+      "temporal_scope": "permanent"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 1.0,
+      "verifier": "bipm_cgpm"
+    },
+    "lifecycle": {
+      "freshness_state": "CURRENT",
+      "ingested_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-SCI-002",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "The chemical element Gold has an atomic number of 79 and chemical symbol Au.",
+      "entity": "Gold",
+      "attribute": "atomic_number",
+      "value": 79,
+      "category": "science"
+    },
+    "source": {
+      "name": "IUPAC Periodic Table of Elements",
+      "url": "https://iupac.org/what-we-do/periodic-table-of-elements/",
+      "source_type": "primary",
+      "reliability_estimate": 1.0,
+      "license": "IUPAC Standard"
+    },
+    "provenance": {
+      "chain": [
+        "IUPAC Division of Chemical Nomenclature and Structure"
+      ],
+      "is_primary": true,
+      "recorded_at": "2020-01-01T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": null,
+      "valid_until": null,
+      "temporal_scope": "permanent"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 1.0,
+      "verifier": "iupac"
+    },
+    "lifecycle": {
+      "freshness_state": "CURRENT",
+      "ingested_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-SCI-003",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "The Earth is the third planet from the Sun and the only astronomical object known to harbor life.",
+      "entity": "Earth",
+      "attribute": "position_from_sun",
+      "value": 3,
+      "category": "astronomy"
+    },
+    "source": {
+      "name": "NASA Solar System Exploration",
+      "url": "https://solarsystem.nasa.gov/planets/earth/overview/",
+      "source_type": "primary",
+      "reliability_estimate": 0.99,
+      "license": "NASA Open Data"
+    },
+    "provenance": {
+      "chain": [
+        "NASA Planetary Fact Sheet",
+        "IAU Planetary Definitions"
+      ],
+      "is_primary": true,
+      "recorded_at": "2022-01-01T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": null,
+      "valid_until": null,
+      "temporal_scope": "permanent"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 1.0,
+      "verifier": "iau_nasa"
+    },
+    "lifecycle": {
+      "freshness_state": "CURRENT",
+      "ingested_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-HIST-001",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "World War II in Europe formally ended on May 8, 1945 (Victory in Europe Day) with the unconditional surrender of Nazi Germany.",
+      "entity": "World War II in Europe",
+      "attribute": "end_date",
+      "value": "1945-05-08",
+      "category": "history"
+    },
+    "source": {
+      "name": "National Archives and Records Administration (NARA)",
+      "url": "https://www.archives.gov/research/military/ww2",
+      "source_type": "primary",
+      "reliability_estimate": 0.99,
+      "license": "US Government Public Domain"
+    },
+    "provenance": {
+      "chain": [
+        "German Instrument of Surrender Berlin-Karlshorst May 8 1945"
+      ],
+      "is_primary": true,
+      "recorded_at": "2020-01-01T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": "1945-05-08T00:00:00Z",
+      "valid_until": null,
+      "temporal_scope": "permanent"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 0.99,
+      "verifier": "historical_consensus"
+    },
+    "lifecycle": {
+      "freshness_state": "HISTORICAL",
+      "ingested_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-HIST-002",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "The Apollo 11 Lunar Module Eagle landed on the Moon on July 20, 1969, and Neil Armstrong became the first human to step onto the lunar surface.",
+      "entity": "Apollo 11",
+      "attribute": "moon_landing_date",
+      "value": "1969-07-20",
+      "category": "history"
+    },
+    "source": {
+      "name": "NASA History Division",
+      "url": "https://history.nasa.gov/alsj/a11/a11.html",
+      "source_type": "primary",
+      "reliability_estimate": 1.0,
+      "license": "NASA Public Domain"
+    },
+    "provenance": {
+      "chain": [
+        "Apollo 11 Mission Operations Report",
+        "NASA Flight Transcripts July 1969"
+      ],
+      "is_primary": true,
+      "recorded_at": "2020-01-01T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": "1969-07-20T00:00:00Z",
+      "valid_until": null,
+      "temporal_scope": "permanent"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 1.0,
+      "verifier": "nasa_official"
+    },
+    "lifecycle": {
+      "freshness_state": "HISTORICAL",
+      "ingested_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-GEO-001",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "Canberra is the official capital city of Australia, founded in 1913 as a compromise between Sydney and Melbourne.",
+      "entity": "Canberra",
+      "attribute": "capital_of",
+      "value": "Australia",
+      "category": "geography"
+    },
+    "source": {
+      "name": "Geoscience Australia & National Capital Authority",
+      "url": "https://www.nca.gov.au/planning-heritage/australias-national-capital",
+      "source_type": "primary",
+      "reliability_estimate": 0.99,
+      "license": "Creative Commons Attribution 4.0"
+    },
+    "provenance": {
+      "chain": [
+        "Australian Capital Territory Seat of Government Act 1908"
+      ],
+      "is_primary": true,
+      "recorded_at": "2021-01-01T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": "1913-03-12T00:00:00Z",
+      "valid_until": null,
+      "temporal_scope": "current"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 1.0,
+      "verifier": "australian_government"
+    },
+    "lifecycle": {
+      "freshness_state": "CURRENT",
+      "ingested_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-GEO-002",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "Mount Everest is Earth's highest mountain above sea level, with an officially surveyed elevation of 8,848.86 meters (29,031.7 ft).",
+      "entity": "Mount Everest",
+      "attribute": "elevation",
+      "value": 8848.86,
+      "category": "geography"
+    },
+    "source": {
+      "name": "Survey Department of Nepal & Ministry of Natural Resources China Joint Declaration",
+      "url": "https://www.nepal.gov.np",
+      "source_type": "primary",
+      "reliability_estimate": 0.99,
+      "license": "Government Official Measurement"
+    },
+    "provenance": {
+      "chain": [
+        "Joint Nepal-China GNSS Geodetic Survey December 2020"
+      ],
+      "is_primary": true,
+      "recorded_at": "2020-12-08T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": "2020-12-08T00:00:00Z",
+      "valid_until": null,
+      "temporal_scope": "current"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 0.99,
+      "verifier": "joint_survey_commission"
+    },
+    "lifecycle": {
+      "freshness_state": "CURRENT",
+      "ingested_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-SCI-004",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "Water boils at exactly 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure (1 atm).",
+      "entity": "Water",
+      "attribute": "boiling_point",
+      "value": 100,
+      "category": "science"
+    },
+    "source": {
+      "name": "NIST Chemistry WebBook",
+      "url": "https://webbook.nist.gov/chemistry/fluid/",
+      "source_type": "primary",
+      "reliability_estimate": 1.0,
+      "license": "Public Domain"
+    },
+    "provenance": {
+      "chain": [
+        "NIST Standard Reference Data"
+      ],
+      "is_primary": true,
+      "recorded_at": "2024-01-01T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": null,
+      "valid_until": null,
+      "temporal_scope": "permanent"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 1.0,
+      "verifier": "NIST"
+    },
+    "lifecycle": {
+      "freshness_state": "CURRENT",
+      "ingested_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-MED-001",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "Alexander Fleming discovered penicillin in September 1928 at St. Mary's Hospital in London.",
+      "entity": "Penicillin",
+      "attribute": "discovery_date",
+      "value": "1928-09",
+      "category": "medicine"
+    },
+    "source": {
+      "name": "Nobel Prize in Physiology or Medicine Archives",
+      "url": "https://www.nobelprize.org/prizes/medicine/1945/fleming/biographical/",
+      "source_type": "primary",
+      "reliability_estimate": 0.99,
+      "license": "Public Record"
+    },
+    "provenance": {
+      "chain": [
+        "Nobel Foundation Archive"
+      ],
+      "is_primary": true,
+      "recorded_at": "2024-01-01T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": "1928-09-01T00:00:00Z",
+      "valid_until": null,
+      "temporal_scope": "permanent"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 0.99,
+      "verifier": "Nobel Foundation"
+    },
+    "lifecycle": {
+      "freshness_state": "HISTORICAL",
+      "ingested_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-SCI-005",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "The chemical structure of the DNA double helix was discovered in 1953 by James Watson, Francis Crick, and Rosalind Franklin.",
+      "entity": "DNA",
+      "attribute": "double_helix_discovery",
+      "value": "1953",
+      "category": "science"
+    },
+    "source": {
+      "name": "Nature Archive 1953",
+      "url": "https://www.nature.com/articles/171737a0",
+      "source_type": "primary",
+      "reliability_estimate": 0.99,
+      "license": "Nature Publishing"
+    },
+    "provenance": {
+      "chain": [
+        "Nature Original Publication April 25 1953"
+      ],
+      "is_primary": true,
+      "recorded_at": "2024-01-01T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": "1953-04-25T00:00:00Z",
+      "valid_until": null,
+      "temporal_scope": "permanent"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 0.99,
+      "verifier": "Nature Editorial Board"
+    },
+    "lifecycle": {
+      "freshness_state": "HISTORICAL",
+      "ingested_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-GEO-003",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "Ottawa is the official capital city of Canada, designated by Queen Victoria in 1857.",
+      "entity": "Ottawa",
+      "attribute": "capital_of_canada",
+      "value": "Ottawa",
+      "category": "geography"
+    },
+    "source": {
+      "name": "Government of Canada Historical Records",
+      "url": "https://www.canada.ca/en/canadian-heritage/services/origin-name-capital.html",
+      "source_type": "primary",
+      "reliability_estimate": 1.0,
+      "license": "Open Government Licence"
+    },
+    "provenance": {
+      "chain": [
+        "Official Government of Canada Gazette"
+      ],
+      "is_primary": true,
+      "recorded_at": "2024-01-01T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": "1857-12-31T00:00:00Z",
+      "valid_until": null,
+      "temporal_scope": "permanent"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 1.0,
+      "verifier": "Parliament of Canada"
+    },
+    "lifecycle": {
+      "freshness_state": "CURRENT",
+      "ingested_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-GEO-004",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "Brasilia is the official federal capital city of Brazil, inaugurated on April 21, 1960.",
+      "entity": "Brasilia",
+      "attribute": "capital_of_brazil",
+      "value": "Brasilia",
+      "category": "geography"
+    },
+    "source": {
+      "name": "IBGE Brazilian Institute of Geography and Statistics",
+      "url": "https://www.ibge.gov.br",
+      "source_type": "primary",
+      "reliability_estimate": 0.99,
+      "license": "Public Government Record"
+    },
+    "provenance": {
+      "chain": [
+        "Federal Constitution of Brazil 1988"
+      ],
+      "is_primary": true,
+      "recorded_at": "2024-01-01T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": "1960-04-21T00:00:00Z",
+      "valid_until": null,
+      "temporal_scope": "permanent"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 1.0,
+      "verifier": "Government of Brazil"
+    },
+    "lifecycle": {
+      "freshness_state": "CURRENT",
+      "ingested_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-TECH-003",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "Python was created by Guido van Rossum and first released in February 1991.",
+      "entity": "Python",
+      "attribute": "creation_date",
+      "value": "1991-02",
+      "category": "technology"
+    },
+    "source": {
+      "name": "Python Software Foundation",
+      "url": "https://www.python.org/doc/essays/history/",
+      "source_type": "primary",
+      "reliability_estimate": 0.99,
+      "license": "PSF License"
+    },
+    "provenance": {
+      "chain": [
+        "PSF Official History Archive"
+      ],
+      "is_primary": true,
+      "recorded_at": "2024-01-01T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": "1991-02-20T00:00:00Z",
+      "valid_until": null,
+      "temporal_scope": "permanent"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 1.0,
+      "verifier": "Guido van Rossum"
+    },
+    "lifecycle": {
+      "freshness_state": "HISTORICAL",
+      "ingested_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-TECH-004",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "The Linux kernel was created by Linus Torvalds and first publicly released on September 17, 1991.",
+      "entity": "Linux",
+      "attribute": "kernel_release_date",
+      "value": "1991-09-17",
+      "category": "technology"
+    },
+    "source": {
+      "name": "The Linux Foundation Archives",
+      "url": "https://kernel.org",
+      "source_type": "primary",
+      "reliability_estimate": 0.99,
+      "license": "GPLv2"
+    },
+    "provenance": {
+      "chain": [
+        "comp.os.minix Torvalds Posting 1991"
+      ],
+      "is_primary": true,
+      "recorded_at": "2024-01-01T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": "1991-09-17T00:00:00Z",
+      "valid_until": null,
+      "temporal_scope": "permanent"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 1.0,
+      "verifier": "Linux Foundation"
+    },
+    "lifecycle": {
+      "freshness_state": "HISTORICAL",
+      "ingested_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-HIST-003",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "The Berlin Wall fell on November 9, 1989, marking the symbolic end of the Cold War in Europe.",
+      "entity": "Berlin Wall",
+      "attribute": "fall_date",
+      "value": "1989-11-09",
+      "category": "history"
+    },
+    "source": {
+      "name": "German Historical Museum",
+      "url": "https://www.dhm.de",
+      "source_type": "primary",
+      "reliability_estimate": 0.99,
+      "license": "Public Cultural Archive"
+    },
+    "provenance": {
+      "chain": [
+        "GDR Government Press Conference Nov 9 1989"
+      ],
+      "is_primary": true,
+      "recorded_at": "2024-01-01T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": "1989-11-09T00:00:00Z",
+      "valid_until": null,
+      "temporal_scope": "permanent"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 1.0,
+      "verifier": "Federal Republic of Germany"
+    },
+    "lifecycle": {
+      "freshness_state": "HISTORICAL",
+      "ingested_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-HIST-004",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "The United States Declaration of Independence was ratified on July 4, 1776 by the Second Continental Congress.",
+      "entity": "Declaration of Independence",
+      "attribute": "ratification_date",
+      "value": "1776-07-04",
+      "category": "history"
+    },
+    "source": {
+      "name": "US National Archives and Records Administration",
+      "url": "https://www.archives.gov/founding-docs/declaration",
+      "source_type": "primary",
+      "reliability_estimate": 1.0,
+      "license": "Public Domain"
+    },
+    "provenance": {
+      "chain": [
+        "Continental Congress Official Journals"
+      ],
+      "is_primary": true,
+      "recorded_at": "2024-01-01T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": "1776-07-04T00:00:00Z",
+      "valid_until": null,
+      "temporal_scope": "permanent"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 1.0,
+      "verifier": "US National Archives"
+    },
+    "lifecycle": {
+      "freshness_state": "HISTORICAL",
+      "ingested_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-SCI-006",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "Albert Einstein published the General Theory of Relativity in November 1915.",
+      "entity": "General Relativity",
+      "attribute": "publication_date",
+      "value": "1915-11",
+      "category": "science"
+    },
+    "source": {
+      "name": "Prussian Academy of Sciences Proceedings",
+      "url": "https://einsteinpapers.press.princeton.edu",
+      "source_type": "primary",
+      "reliability_estimate": 0.99,
+      "license": "Public Academic Archive"
+    },
+    "provenance": {
+      "chain": [
+        "Sitzungsberichte der Preussischen Akademie der Wissenschaften"
+      ],
+      "is_primary": true,
+      "recorded_at": "2024-01-01T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": "1915-11-25T00:00:00Z",
+      "valid_until": null,
+      "temporal_scope": "permanent"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 1.0,
+      "verifier": "Prussian Academy of Sciences"
+    },
+    "lifecycle": {
+      "freshness_state": "HISTORICAL",
+      "ingested_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-SCI-007",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "Albert Einstein received the 1921 Nobel Prize in Physics for his explanation of the photoelectric effect, not for the theory of relativity.",
+      "entity": "Albert Einstein",
+      "attribute": "nobel_prize_reason",
+      "value": "photoelectric_effect",
+      "category": "science"
+    },
+    "source": {
+      "name": "Nobel Prize in Physics Official Archive",
+      "url": "https://www.nobelprize.org/prizes/physics/1921/summary/",
+      "source_type": "primary",
+      "reliability_estimate": 1.0,
+      "license": "Public Record"
+    },
+    "provenance": {
+      "chain": [
+        "Royal Swedish Academy of Sciences Nobel Citation 1922"
+      ],
+      "is_primary": true,
+      "recorded_at": "2024-01-01T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": "1922-11-09T00:00:00Z",
+      "valid_until": null,
+      "temporal_scope": "permanent"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 1.0,
+      "verifier": "Royal Swedish Academy of Sciences"
+    },
+    "lifecycle": {
+      "freshness_state": "HISTORICAL",
+      "ingested_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-TECH-005",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "The World Wide Web was invented by Tim Berners-Lee in 1989 at CERN.",
+      "entity": "World Wide Web",
+      "attribute": "invention_date",
+      "value": "1989",
+      "category": "technology"
+    },
+    "source": {
+      "name": "CERN Document Server",
+      "url": "https://home.cern/science/computing/birth-web",
+      "source_type": "primary",
+      "reliability_estimate": 1.0,
+      "license": "Public Domain"
+    },
+    "provenance": {
+      "chain": [
+        "Information Management: A Proposal CERN 1989"
+      ],
+      "is_primary": true,
+      "recorded_at": "2024-01-01T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": "1989-03-01T00:00:00Z",
+      "valid_until": null,
+      "temporal_scope": "permanent"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 1.0,
+      "verifier": "CERN"
+    },
+    "lifecycle": {
+      "freshness_state": "HISTORICAL",
+      "ingested_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-SCI-008",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "Humans typically have 46 chromosomes in 23 pairs in each diploid cell.",
+      "entity": "Human chromosomes",
+      "attribute": "chromosome_count",
+      "value": 46,
+      "category": "science"
+    },
+    "source": {
+      "name": "National Human Genome Research Institute (NHGRI)",
+      "url": "https://www.genome.gov/genetics-glossary/Chromosome",
+      "source_type": "primary",
+      "reliability_estimate": 1.0,
+      "license": "Public Domain"
+    },
+    "provenance": {
+      "chain": [
+        "NHGRI Genome Glossary"
+      ],
+      "is_primary": true,
+      "recorded_at": "2024-01-01T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": null,
+      "valid_until": null,
+      "temporal_scope": "permanent"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 1.0,
+      "verifier": "NHGRI"
+    },
+    "lifecycle": {
+      "freshness_state": "CURRENT",
+      "ingested_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-HIST-005",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "Yuri Gagarin became the first human in outer space on April 12, 1961 aboard Vostok 1.",
+      "entity": "Yuri Gagarin",
+      "attribute": "spaceflight_date",
+      "value": "1961-04-12",
+      "category": "history"
+    },
+    "source": {
+      "name": "NASA History Division",
+      "url": "https://history.nasa.gov",
+      "source_type": "primary",
+      "reliability_estimate": 1.0,
+      "license": "Public Domain"
+    },
+    "provenance": {
+      "chain": [
+        "Soviet Space Agency Official Records"
+      ],
+      "is_primary": true,
+      "recorded_at": "2024-01-01T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": "1961-04-12T00:00:00Z",
+      "valid_until": null,
+      "temporal_scope": "permanent"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 1.0,
+      "verifier": "NASA History Office"
+    },
+    "lifecycle": {
+      "freshness_state": "HISTORICAL",
+      "ingested_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-HIST-006",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "The RMS Titanic sank in the North Atlantic Ocean on April 15, 1912 after colliding with an iceberg.",
+      "entity": "Titanic",
+      "attribute": "sinking_date",
+      "value": "1912-04-15",
+      "category": "history"
+    },
+    "source": {
+      "name": "British Board of Trade Inquiry",
+      "url": "https://www.titanicinquiry.org",
+      "source_type": "primary",
+      "reliability_estimate": 0.99,
+      "license": "Public Record"
+    },
+    "provenance": {
+      "chain": [
+        "British Board of Trade Inquiry 1912"
+      ],
+      "is_primary": true,
+      "recorded_at": "2024-01-01T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": "1912-04-15T00:00:00Z",
+      "valid_until": null,
+      "temporal_scope": "permanent"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 1.0,
+      "verifier": "Board of Trade"
+    },
+    "lifecycle": {
+      "freshness_state": "HISTORICAL",
+      "ingested_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-TECH-006",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "Google was founded on September 4, 1998 by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University.",
+      "entity": "Google",
+      "attribute": "founding_date",
+      "value": "1998-09-04",
+      "category": "technology"
+    },
+    "source": {
+      "name": "Alphabet Inc. Investor Relations & SEC Filings",
+      "url": "https://abc.xyz/investor/",
+      "source_type": "primary",
+      "reliability_estimate": 1.0,
+      "license": "Public Record"
+    },
+    "provenance": {
+      "chain": [
+        "SEC Form 10-K",
+        "State of California Incorporation"
+      ],
+      "is_primary": true,
+      "recorded_at": "2024-01-01T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": "1998-09-04T00:00:00Z",
+      "valid_until": null,
+      "temporal_scope": "permanent"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 1.0,
+      "verifier": "SEC"
+    },
+    "lifecycle": {
+      "freshness_state": "HISTORICAL",
+      "ingested_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-TECH-007",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "Microsoft was founded on April 4, 1975 by Bill Gates and Paul Allen in Albuquerque, New Mexico.",
+      "entity": "Microsoft",
+      "attribute": "founding_date",
+      "value": "1975-04-04",
+      "category": "technology"
+    },
+    "source": {
+      "name": "Microsoft Corporate History",
+      "url": "https://www.microsoft.com/en-us/about",
+      "source_type": "primary",
+      "reliability_estimate": 1.0,
+      "license": "Public Record"
+    },
+    "provenance": {
+      "chain": [
+        "State of New Mexico Incorporation Records 1975"
+      ],
+      "is_primary": true,
+      "recorded_at": "2024-01-01T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": "1975-04-04T00:00:00Z",
+      "valid_until": null,
+      "temporal_scope": "permanent"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 1.0,
+      "verifier": "State of New Mexico"
+    },
+    "lifecycle": {
+      "freshness_state": "HISTORICAL",
+      "ingested_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "identity": {
+      "id": "OKF-GEO-005",
+      "okf_version": "1.0"
+    },
+    "content": {
+      "statement": "Tokyo is the official capital city of Japan, serving as the seat of the Japanese Emperor and government.",
+      "entity": "Tokyo",
+      "attribute": "capital_of_japan",
+      "value": "Tokyo",
+      "category": "geography"
+    },
+    "source": {
+      "name": "Tokyo Metropolitan Government",
+      "url": "https://www.metro.tokyo.lg.jp",
+      "source_type": "primary",
+      "reliability_estimate": 1.0,
+      "license": "Official Government Record"
+    },
+    "provenance": {
+      "chain": [
+        "Constitution of Japan 1947"
+      ],
+      "is_primary": true,
+      "recorded_at": "2024-01-01T00:00:00Z"
+    },
+    "temporal": {
+      "valid_from": "1868-10-23T00:00:00Z",
+      "valid_until": null,
+      "temporal_scope": "permanent"
+    },
+    "verification": {
+      "status": "verified",
+      "confidence": 1.0,
+      "verifier": "Government of Japan"
+    },
+    "lifecycle": {
+      "freshness_state": "CURRENT",
+      "ingested_at": "2024-01-01T00:00:00Z"
+    }
+  }
+]

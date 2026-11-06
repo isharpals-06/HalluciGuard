@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "OpenKnowledgeFormatArtifact",
+  "type": "object",
+  "required": ["identity", "content", "source", "provenance", "temporal", "verification", "lifecycle"],
+  "properties": {
+    "identity": {
+      "type": "object",
+      "required": ["id", "okf_version"],
+      "properties": {
+        "id": {"type": "string"},
+        "okf_version": {"type": "string", "enum": ["1.0", "1.0.0"]}
+      }
+    },
+    "content": {
+      "type": "object",
+      "required": ["statement", "entity", "attribute"],
+      "properties": {
+        "statement": {"type": "string", "minLength": 5},
+        "entity": {"type": "string"},
+        "attribute": {"type": "string"},
+        "value": {"type": ["string", "number", "boolean", "null"]},
+        "category": {"type": "string"}
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": ["name", "source_type", "reliability_estimate"],
+      "properties": {
+        "name": {"type": "string"},
+        "url": {"type": "string"},
+        "source_type": {
+          "type": "string",
+          "enum": ["primary", "secondary", "aggregated", "synthesized"]
+        },
+        "reliability_estimate": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "license": {"type": "string"}
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["chain", "is_primary", "recorded_at"],
+      "properties": {
+        "chain": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "is_primary": {"type": "boolean"},
+        "recorded_at": {"type": "string"}
+      }
+    },
+    "temporal": {
+      "type": "object",
+      "required": ["temporal_scope"],
+      "properties": {
+        "valid_from": {"type": ["string", "null"]},
+        "valid_until": {"type": ["string", "null"]},
+        "temporal_scope": {
+          "type": "string",
+          "enum": ["current", "historical", "permanent", "transient"]
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "required": ["status", "confidence"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["verified", "unverified", "disputed"]
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "verifier": {"type": "string"}
+      }
+    },
+    "lifecycle": {
+      "type": "object",
+      "required": ["freshness_state", "ingested_at"],
+      "properties": {
+        "freshness_state": {
+          "type": "string",
+          "enum": ["CURRENT", "HISTORICAL", "STALE", "UNKNOWN"]
+        },
+        "ingested_at": {"type": "string"}
+      }
+    }
+  }
+}

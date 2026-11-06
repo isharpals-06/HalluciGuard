@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="HalluciGuard-OKF evaluates factual claims against retrieved evidence and makes uncertainty visible.">
+  <meta name="theme-color" content="#ffffff"><title>HalluciGuard-OKF — Evidence before answers</title>
+  <link rel="icon" type="image/svg+xml" href="/static/favicon.svg?v=2"><link rel="stylesheet" href="/static/app.css">
+</head>
+<body class="landing-body">
+  <header class="site-header"><a class="brand" href="/" aria-label="HalluciGuard home"><img class="brand-mark" src="/static/favicon.svg?v=2" alt=""><span>HalluciGuard<span class="brand-suffix">-OKF</span></span></a>
+    <nav class="site-nav" aria-label="Main navigation"><a href="#features">Features</a><a href="#workflow">How it works</a><a href="#about">About</a></nav>
+    <a class="button button-dark button-small" href="/dashboard/verify">Open research app <span aria-hidden="true">↗</span></a>
+    <button class="icon-button menu-button" id="landing-menu" aria-label="Open navigation" aria-expanded="false">☰</button>
+  </header>
+  <main>
+    <section class="hero section-wrap">
+      <div class="hero-copy"><div class="eyebrow"><span class="eyebrow-dot"></span> RESEARCH SYSTEM · CLAIM-LEVEL VERIFICATION</div>
+        <h1>Check factual claims against evidence, one statement at a time.</h1>
+        <p class="hero-lede">HalluciGuard-OKF decomposes generated text into claims, retrieves evidence from a curated knowledge base, and surfaces uncertainty when the evidence is limited or conflicting.</p>
+        <div class="hero-actions"><a class="button button-dark" href="/dashboard/verify">Open research app <span aria-hidden="true">→</span></a><a class="button button-light" href="#workflow">Explore the workflow</a></div>
+        <div class="hero-note"><span class="status-mark" aria-hidden="true">●</span> Local research demo · evidence and limitations are shown with each result</div>
+      </div>
+      <div class="product-preview" aria-label="Illustration of the claim verification workflow">
+        <div class="preview-top"><div class="window-dots"><i></i><i></i><i></i></div><span>CLAIM REVIEW</span><span class="preview-index">01 / EVIDENCE</span></div>
+        <div class="preview-body"><div class="preview-label">INPUT TEXT</div><div class="preview-input">A response is broken into individual factual claims before review.</div>
+          <div class="preview-divider"><span>↓</span></div><div class="preview-row"><div class="preview-node"><span class="node-number">01</span><strong>Extract claims</strong><small>Atomic statements</small></div><span class="preview-arrow">→</span><div class="preview-node"><span class="node-number">02</span><strong>Retrieve evidence</strong><small>Curated OKF records</small></div></div>
+          <div class="preview-evidence"><div class="preview-evidence-head"><span class="preview-label">EVIDENCE TRACE</span><span class="mono">RANKED SOURCES</span></div><div class="trace-line"><span class="trace-dot"></span><span>Retrieval relevance</span><span class="trace-bar"><i style="width:76%"></i></span></div><div class="trace-line"><span class="trace-dot"></span><span>Evidence agreement</span><span class="trace-bar"><i style="width:48%"></i></span></div><div class="trace-line"><span class="trace-dot"></span><span>Provenance signals</span><span class="trace-bar"><i style="width:64%"></i></span></div></div>
+          <div class="preview-foot">A transparent research workflow <span>→</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="principle-strip"><div><span>01</span> Claim-level analysis</div><div><span>02</span> Retrieved evidence</div><div><span>03</span> Explicit uncertainty</div><div><span>04</span> Reproducible evaluation</div></section>
+    <section class="section-wrap content-section" id="features"><div class="section-heading"><div><div class="eyebrow">CAPABILITIES</div><h2>Trace each decision back to its evidence.</h2></div><p>The interface reflects the current implementation. Model and retrieval modes are identified in the research app; results are grounded in the repository’s local evidence store.</p></div>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="feature-number">01</span><h3>Atomic claim extraction</h3><p>Breaks a response into individual statements for claim-level analysis.</p></article>
+        <article class="feature-card"><span class="feature-number">02</span><h3>Hybrid evidence retrieval</h3><p>Searches curated knowledge artifacts using the configured retrieval mode.</p></article>
+        <article class="feature-card"><span class="feature-number">03</span><h3>Evidence-grounded signals</h3><p>Combines relevance, NLI, semantic similarity, provenance, and freshness signals.</p></article>
+        <article class="feature-card"><span class="feature-number">04</span><h3>Uncertainty visibility</h3><p>Shows confidence, uncertainty, evidence coverage, and evidence disagreement.</p></article>
+        <article class="feature-card"><span class="feature-number">05</span><h3>Selective abstention</h3><p>Can flag conflicting evidence and route a claim for human review.</p></article>
+        <article class="feature-card"><span class="feature-number">06</span><h3>Evidence attribution</h3><p>Displays retrieved artifact identifiers and source metadata alongside analysis.</p></article>
+      </div>
+    </section>
+    <section class="workflow-section" id="workflow"><div class="section-wrap"><div class="section-heading"><div><div class="eyebrow">METHOD</div><h2>From generated text to inspectable claims.</h2></div><p>Each stage contributes signals to a claim assessment. An insufficient evidence result is kept distinct from a contradiction.</p></div>
+      <ol class="workflow-list"><li><span>01</span><strong>Input text</strong><small>Response and optional query</small></li><li><span>02</span><strong>Claim extraction</strong><small>Atomic propositions</small></li><li><span>03</span><strong>Evidence retrieval</strong><small>Local OKF knowledge</small></li><li><span>04</span><strong>Evidence evaluation</strong><small>NLI and quality signals</small></li><li><span>05</span><strong>Claim assessment</strong><small>Supported, contradicted, or insufficient</small></li><li><span>06</span><strong>Uncertainty review</strong><small>Confidence and abstention signals</small></li></ol>
+    </div></section>
+    <section class="about-section" id="about"><div class="section-wrap about-inner"><div><div class="eyebrow">ABOUT HALLUCIGUARD-OKF</div><h2>A research system for studying reliability under evidence uncertainty.</h2></div><p>HalluciGuard-OKF explores whether retrieval and uncertainty signals can improve claim-level hallucination detection. Current evaluations use a small local benchmark; performance and calibration should be interpreted as preliminary.</p></div></section>
+    <section class="section-wrap final-cta"><div><div class="eyebrow">EXPLORE THE RESEARCH DEMO</div><h2>Inspect a claim verification run.</h2><p>Submit text to the local pipeline and inspect its retrieved evidence and signals.</p></div><a class="button button-dark" href="/dashboard/verify">Open research app <span aria-hidden="true">→</span></a></section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="/" aria-label="HalluciGuard home"><img class="brand-mark" src="/static/favicon.svg?v=2" alt=""><span>HalluciGuard<span class="brand-suffix">-OKF</span></span></a><span>Research prototype · evidence-grounded claim analysis</span><a href="/dashboard/evaluation">View evaluation results →</a></footer>
+  <script src="/static/landing.js" defer></script>
+</body></html>

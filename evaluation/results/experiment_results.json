@@ -1,0 +1,762 @@
+{
+  "Baseline_1_Heuristic": {
+    "accuracy": 0.9231,
+    "macro_precision": 0.9167,
+    "macro_recall": 0.9333,
+    "macro_f1": 0.9153,
+    "weighted_f1": 0.9243,
+    "expected_calibration_error": 0.0796,
+    "confusion_matrix": [
+      [
+        4,
+        0,
+        1
+      ],
+      [
+        0,
+        5,
+        0
+      ],
+      [
+        0,
+        0,
+        3
+      ]
+    ],
+    "per_class": {
+      "SUPPORTED": {
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1": 0.8889,
+        "support": 5
+      },
+      "CONTRADICTED": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "UNVERIFIED": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571,
+        "support": 3
+      }
+    }
+  },
+  "Baseline_2_Neural_MLP_Forced": {
+    "accuracy": 1.0,
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "macro_f1": 1.0,
+    "weighted_f1": 1.0,
+    "expected_calibration_error": 0.3837,
+    "confusion_matrix": [
+      [
+        5,
+        0,
+        0
+      ],
+      [
+        0,
+        5,
+        0
+      ],
+      [
+        0,
+        0,
+        3
+      ]
+    ],
+    "per_class": {
+      "SUPPORTED": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "CONTRADICTED": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "UNVERIFIED": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      }
+    }
+  },
+  "Baseline_3_Full_Benchmark_Forced": {
+    "accuracy": 0.9643,
+    "macro_precision": 0.9685,
+    "macro_recall": 0.9669,
+    "macro_f1": 0.9675,
+    "weighted_f1": 0.9642,
+    "expected_calibration_error": 0.3475,
+    "confusion_matrix": [
+      [
+        32,
+        1,
+        0
+      ],
+      [
+        2,
+        27,
+        0
+      ],
+      [
+        0,
+        0,
+        22
+      ]
+    ],
+    "per_class": {
+      "SUPPORTED": {
+        "precision": 0.9412,
+        "recall": 0.9697,
+        "f1": 0.9552,
+        "support": 33
+      },
+      "CONTRADICTED": {
+        "precision": 0.9643,
+        "recall": 0.931,
+        "f1": 0.9474,
+        "support": 29
+      },
+      "UNVERIFIED": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 22
+      }
+    }
+  },
+  "Proposed_Selective_Abstention": {
+    "accuracy": 0.9649,
+    "macro_precision": 0.9649,
+    "macro_recall": 0.9649,
+    "macro_f1": 0.9649,
+    "weighted_f1": 0.9649,
+    "expected_calibration_error": 0.3832,
+    "confusion_matrix": [
+      [
+        28,
+        1,
+        0
+      ],
+      [
+        1,
+        27,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "per_class": {
+      "SUPPORTED": {
+        "precision": 0.9655,
+        "recall": 0.9655,
+        "f1": 0.9655,
+        "support": 29
+      },
+      "CONTRADICTED": {
+        "precision": 0.9643,
+        "recall": 0.9643,
+        "f1": 0.9643,
+        "support": 28
+      },
+      "UNVERIFIED": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      }
+    },
+    "coverage": 0.6786,
+    "abstained_count": 27,
+    "accepted_count": 57
+  },
+  "risk_coverage_curve": [
+    {
+      "coverage": 0.1071,
+      "selective_risk": 0.1111,
+      "selective_accuracy": 0.8889,
+      "accepted_count": 9,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.119,
+      "selective_risk": 0.1,
+      "selective_accuracy": 0.9,
+      "accepted_count": 10,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.1429,
+      "selective_risk": 0.0833,
+      "selective_accuracy": 0.9167,
+      "accepted_count": 12,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.1667,
+      "selective_risk": 0.0714,
+      "selective_accuracy": 0.9286,
+      "accepted_count": 14,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.1786,
+      "selective_risk": 0.0667,
+      "selective_accuracy": 0.9333,
+      "accepted_count": 15,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.2024,
+      "selective_risk": 0.0588,
+      "selective_accuracy": 0.9412,
+      "accepted_count": 17,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.2143,
+      "selective_risk": 0.0556,
+      "selective_accuracy": 0.9444,
+      "accepted_count": 18,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.2381,
+      "selective_risk": 0.05,
+      "selective_accuracy": 0.95,
+      "accepted_count": 20,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.25,
+      "selective_risk": 0.0476,
+      "selective_accuracy": 0.9524,
+      "accepted_count": 21,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.2738,
+      "selective_risk": 0.0435,
+      "selective_accuracy": 0.9565,
+      "accepted_count": 23,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.2857,
+      "selective_risk": 0.0417,
+      "selective_accuracy": 0.9583,
+      "accepted_count": 24,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.3095,
+      "selective_risk": 0.0385,
+      "selective_accuracy": 0.9615,
+      "accepted_count": 26,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.3214,
+      "selective_risk": 0.037,
+      "selective_accuracy": 0.963,
+      "accepted_count": 27,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.3452,
+      "selective_risk": 0.0345,
+      "selective_accuracy": 0.9655,
+      "accepted_count": 29,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.369,
+      "selective_risk": 0.0323,
+      "selective_accuracy": 0.9677,
+      "accepted_count": 31,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.381,
+      "selective_risk": 0.0312,
+      "selective_accuracy": 0.9688,
+      "accepted_count": 32,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.4048,
+      "selective_risk": 0.0294,
+      "selective_accuracy": 0.9706,
+      "accepted_count": 34,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.4167,
+      "selective_risk": 0.0286,
+      "selective_accuracy": 0.9714,
+      "accepted_count": 35,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.4405,
+      "selective_risk": 0.027,
+      "selective_accuracy": 0.973,
+      "accepted_count": 37,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.4524,
+      "selective_risk": 0.0263,
+      "selective_accuracy": 0.9737,
+      "accepted_count": 38,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.4762,
+      "selective_risk": 0.025,
+      "selective_accuracy": 0.975,
+      "accepted_count": 40,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.4881,
+      "selective_risk": 0.0244,
+      "selective_accuracy": 0.9756,
+      "accepted_count": 41,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.5119,
+      "selective_risk": 0.0233,
+      "selective_accuracy": 0.9767,
+      "accepted_count": 43,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.5238,
+      "selective_risk": 0.0227,
+      "selective_accuracy": 0.9773,
+      "accepted_count": 44,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.5476,
+      "selective_risk": 0.0217,
+      "selective_accuracy": 0.9783,
+      "accepted_count": 46,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.5595,
+      "selective_risk": 0.0213,
+      "selective_accuracy": 0.9787,
+      "accepted_count": 47,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.5833,
+      "selective_risk": 0.0204,
+      "selective_accuracy": 0.9796,
+      "accepted_count": 49,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.6071,
+      "selective_risk": 0.0392,
+      "selective_accuracy": 0.9608,
+      "accepted_count": 51,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.619,
+      "selective_risk": 0.0385,
+      "selective_accuracy": 0.9615,
+      "accepted_count": 52,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.6429,
+      "selective_risk": 0.037,
+      "selective_accuracy": 0.963,
+      "accepted_count": 54,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.6548,
+      "selective_risk": 0.0364,
+      "selective_accuracy": 0.9636,
+      "accepted_count": 55,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.6786,
+      "selective_risk": 0.0351,
+      "selective_accuracy": 0.9649,
+      "accepted_count": 57,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.6905,
+      "selective_risk": 0.0517,
+      "selective_accuracy": 0.9483,
+      "accepted_count": 58,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.7143,
+      "selective_risk": 0.05,
+      "selective_accuracy": 0.95,
+      "accepted_count": 60,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.7262,
+      "selective_risk": 0.0492,
+      "selective_accuracy": 0.9508,
+      "accepted_count": 61,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.75,
+      "selective_risk": 0.0476,
+      "selective_accuracy": 0.9524,
+      "accepted_count": 63,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.7619,
+      "selective_risk": 0.0469,
+      "selective_accuracy": 0.9531,
+      "accepted_count": 64,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.7857,
+      "selective_risk": 0.0455,
+      "selective_accuracy": 0.9545,
+      "accepted_count": 66,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.8095,
+      "selective_risk": 0.0441,
+      "selective_accuracy": 0.9559,
+      "accepted_count": 68,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.8214,
+      "selective_risk": 0.0435,
+      "selective_accuracy": 0.9565,
+      "accepted_count": 69,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.8452,
+      "selective_risk": 0.0423,
+      "selective_accuracy": 0.9577,
+      "accepted_count": 71,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.8571,
+      "selective_risk": 0.0417,
+      "selective_accuracy": 0.9583,
+      "accepted_count": 72,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.881,
+      "selective_risk": 0.0405,
+      "selective_accuracy": 0.9595,
+      "accepted_count": 74,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.8929,
+      "selective_risk": 0.04,
+      "selective_accuracy": 0.96,
+      "accepted_count": 75,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.9167,
+      "selective_risk": 0.039,
+      "selective_accuracy": 0.961,
+      "accepted_count": 77,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.9286,
+      "selective_risk": 0.0385,
+      "selective_accuracy": 0.9615,
+      "accepted_count": 78,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.9524,
+      "selective_risk": 0.0375,
+      "selective_accuracy": 0.9625,
+      "accepted_count": 80,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.9643,
+      "selective_risk": 0.037,
+      "selective_accuracy": 0.963,
+      "accepted_count": 81,
+      "total_count": 84
+    },
+    {
+      "coverage": 0.9881,
+      "selective_risk": 0.0361,
+      "selective_accuracy": 0.9639,
+      "accepted_count": 83,
+      "total_count": 84
+    },
+    {
+      "coverage": 1.0,
+      "selective_risk": 0.0357,
+      "selective_accuracy": 0.9643,
+      "accepted_count": 84,
+      "total_count": 84
+    }
+  ],
+  "Ablation_Full_Model": {
+    "accuracy": 0.9643,
+    "macro_precision": 0.9685,
+    "macro_recall": 0.9669,
+    "macro_f1": 0.9675,
+    "weighted_f1": 0.9642,
+    "expected_calibration_error": 0.3475,
+    "confusion_matrix": [
+      [
+        32,
+        1,
+        0
+      ],
+      [
+        2,
+        27,
+        0
+      ],
+      [
+        0,
+        0,
+        22
+      ]
+    ],
+    "per_class": {
+      "SUPPORTED": {
+        "precision": 0.9412,
+        "recall": 0.9697,
+        "f1": 0.9552,
+        "support": 33
+      },
+      "CONTRADICTED": {
+        "precision": 0.9643,
+        "recall": 0.931,
+        "f1": 0.9474,
+        "support": 29
+      },
+      "UNVERIFIED": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 22
+      }
+    }
+  },
+  "Ablation_wo_Freshness": {
+    "accuracy": 0.9524,
+    "macro_precision": 0.9568,
+    "macro_recall": 0.9568,
+    "macro_f1": 0.9568,
+    "weighted_f1": 0.9524,
+    "expected_calibration_error": 0.3507,
+    "confusion_matrix": [
+      [
+        31,
+        2,
+        0
+      ],
+      [
+        2,
+        27,
+        0
+      ],
+      [
+        0,
+        0,
+        22
+      ]
+    ],
+    "per_class": {
+      "SUPPORTED": {
+        "precision": 0.9394,
+        "recall": 0.9394,
+        "f1": 0.9394,
+        "support": 33
+      },
+      "CONTRADICTED": {
+        "precision": 0.931,
+        "recall": 0.931,
+        "f1": 0.931,
+        "support": 29
+      },
+      "UNVERIFIED": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 22
+      }
+    }
+  },
+  "Ablation_wo_Provenance": {
+    "accuracy": 0.9405,
+    "macro_precision": 0.9397,
+    "macro_recall": 0.9453,
+    "macro_f1": 0.9415,
+    "weighted_f1": 0.9401,
+    "expected_calibration_error": 0.3923,
+    "confusion_matrix": [
+      [
+        31,
+        1,
+        1
+      ],
+      [
+        2,
+        26,
+        1
+      ],
+      [
+        0,
+        0,
+        22
+      ]
+    ],
+    "per_class": {
+      "SUPPORTED": {
+        "precision": 0.9394,
+        "recall": 0.9394,
+        "f1": 0.9394,
+        "support": 33
+      },
+      "CONTRADICTED": {
+        "precision": 0.963,
+        "recall": 0.8966,
+        "f1": 0.9286,
+        "support": 29
+      },
+      "UNVERIFIED": {
+        "precision": 0.9167,
+        "recall": 1.0,
+        "f1": 0.9565,
+        "support": 22
+      }
+    }
+  },
+  "Ablation_Sparse_Only": {
+    "accuracy": 0.9643,
+    "macro_precision": 0.9685,
+    "macro_recall": 0.9669,
+    "macro_f1": 0.9675,
+    "weighted_f1": 0.9642,
+    "expected_calibration_error": 0.3528,
+    "confusion_matrix": [
+      [
+        32,
+        1,
+        0
+      ],
+      [
+        2,
+        27,
+        0
+      ],
+      [
+        0,
+        0,
+        22
+      ]
+    ],
+    "per_class": {
+      "SUPPORTED": {
+        "precision": 0.9412,
+        "recall": 0.9697,
+        "f1": 0.9552,
+        "support": 33
+      },
+      "CONTRADICTED": {
+        "precision": 0.9643,
+        "recall": 0.931,
+        "f1": 0.9474,
+        "support": 29
+      },
+      "UNVERIFIED": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 22
+      }
+    }
+  },
+  "Ablation_Dense_Only": {
+    "accuracy": 0.9643,
+    "macro_precision": 0.9685,
+    "macro_recall": 0.9669,
+    "macro_f1": 0.9675,
+    "weighted_f1": 0.9642,
+    "expected_calibration_error": 0.3483,
+    "confusion_matrix": [
+      [
+        32,
+        1,
+        0
+      ],
+      [
+        2,
+        27,
+        0
+      ],
+      [
+        0,
+        0,
+        22
+      ]
+    ],
+    "per_class": {
+      "SUPPORTED": {
+        "precision": 0.9412,
+        "recall": 0.9697,
+        "f1": 0.9552,
+        "support": 33
+      },
+      "CONTRADICTED": {
+        "precision": 0.9643,
+        "recall": 0.931,
+        "f1": 0.9474,
+        "support": 29
+      },
+      "UNVERIFIED": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 22
+      }
+    }
+  }
+}

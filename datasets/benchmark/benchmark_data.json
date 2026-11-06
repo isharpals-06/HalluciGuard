@@ -1,0 +1,1882 @@
+[
+  {
+    "example_id": "BM-001",
+    "domain": "business",
+    "query": "Who founded Tesla and when?",
+    "llm_response": "Tesla was founded in 2008 by Elon Musk.",
+    "claims": [
+      {
+        "claim_id": "C001-1",
+        "claim_text": "Tesla was founded in 2008.",
+        "claim_type": "temporal",
+        "gold_label": "CONTRADICTED",
+        "evidence": "Tesla, Inc. was incorporated and founded on July 1, 2003 by Martin Eberhard and Marc Tarpenning in San Carlos, California.",
+        "evidence_source": "Tesla Corporate Historical Filings & SEC Record",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2023-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "annotator_agreement": 1.0,
+        "difficulty": "easy",
+        "hallucination_pattern": "wrong_date"
+      },
+      {
+        "claim_id": "C001-2",
+        "claim_text": "Tesla was founded by Elon Musk.",
+        "claim_type": "attribution",
+        "gold_label": "CONTRADICTED",
+        "evidence": "Tesla, Inc. was incorporated and founded on July 1, 2003 by Martin Eberhard and Marc Tarpenning in San Carlos, California.",
+        "evidence_source": "Tesla Corporate Historical Filings & SEC Record",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2023-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "annotator_agreement": 0.95,
+        "difficulty": "medium",
+        "hallucination_pattern": "wrong_attribution"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-002",
+    "domain": "business",
+    "query": "When did Elon Musk become CEO of Tesla?",
+    "llm_response": "Elon Musk assumed the role of CEO of Tesla in October 2008.",
+    "claims": [
+      {
+        "claim_id": "C002-1",
+        "claim_text": "Elon Musk assumed the role of CEO of Tesla in October 2008.",
+        "claim_type": "temporal",
+        "gold_label": "SUPPORTED",
+        "evidence": "Elon Musk joined Tesla in February 2004 as Chairman of the Board after leading Series A funding, and assumed the role of CEO in October 2008.",
+        "evidence_source": "Tesla Official Press Release Archive",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2023-01-01"
+        },
+        "freshness": "CURRENT",
+        "annotator_agreement": 1.0,
+        "difficulty": "easy",
+        "hallucination_pattern": "none"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-003",
+    "domain": "technology",
+    "query": "Who founded Apple Inc. and when?",
+    "llm_response": "Apple Inc. was founded on April 1, 1976 by Steve Jobs, Steve Wozniak, and Ronald Wayne.",
+    "claims": [
+      {
+        "claim_id": "C003-1",
+        "claim_text": "Apple Inc. was founded on April 1, 1976.",
+        "claim_type": "temporal",
+        "gold_label": "SUPPORTED",
+        "evidence": "Apple Inc. was founded on April 1, 1976 by Steve Jobs, Steve Wozniak, and Ronald Wayne in Los Altos, California.",
+        "evidence_source": "Apple Corporate Archive and Partnership Agreement",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2023-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "annotator_agreement": 1.0,
+        "difficulty": "easy",
+        "hallucination_pattern": "none"
+      },
+      {
+        "claim_id": "C003-2",
+        "claim_text": "Apple Inc. was founded by Steve Jobs, Steve Wozniak, and Ronald Wayne.",
+        "claim_type": "attribution",
+        "gold_label": "SUPPORTED",
+        "evidence": "Apple Inc. was founded on April 1, 1976 by Steve Jobs, Steve Wozniak, and Ronald Wayne in Los Altos, California.",
+        "evidence_source": "Apple Corporate Archive and Partnership Agreement",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2023-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "annotator_agreement": 1.0,
+        "difficulty": "easy",
+        "hallucination_pattern": "none"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-004",
+    "domain": "technology",
+    "query": "Who is the CEO of Apple?",
+    "llm_response": "Tim Cook became the CEO of Apple in August 2011.",
+    "claims": [
+      {
+        "claim_id": "C004-1",
+        "claim_text": "Tim Cook became the CEO of Apple in August 2011.",
+        "claim_type": "temporal",
+        "gold_label": "SUPPORTED",
+        "evidence": "Tim Cook succeeded Steve Jobs as CEO of Apple Inc. on August 24, 2011.",
+        "evidence_source": "Apple Press Release August 2011",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2023-01-01"
+        },
+        "freshness": "CURRENT",
+        "annotator_agreement": 1.0,
+        "difficulty": "easy",
+        "hallucination_pattern": "none"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-005",
+    "domain": "technology",
+    "query": "Who is currently the CEO of Apple?",
+    "llm_response": "The current CEO of Apple is Steve Jobs.",
+    "claims": [
+      {
+        "claim_id": "C005-1",
+        "claim_text": "The current CEO of Apple is Steve Jobs.",
+        "claim_type": "entity",
+        "gold_label": "CONTRADICTED",
+        "evidence": "Tim Cook succeeded Steve Jobs as CEO of Apple Inc. on August 24, 2011.",
+        "evidence_source": "Apple Press Release August 2011",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2023-01-01"
+        },
+        "freshness": "CURRENT",
+        "annotator_agreement": 1.0,
+        "difficulty": "easy",
+        "hallucination_pattern": "wrong_entity"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-006",
+    "domain": "politics",
+    "query": "Who is the Prime Minister of the United Kingdom?",
+    "llm_response": "Rishi Sunak is currently the Prime Minister of the United Kingdom.",
+    "claims": [
+      {
+        "claim_id": "C006-1",
+        "claim_text": "Rishi Sunak is currently the Prime Minister of the United Kingdom.",
+        "claim_type": "entity",
+        "gold_label": "CONTRADICTED",
+        "evidence": "Rishi Sunak served as Prime Minister of the United Kingdom from October 25, 2022 until July 5, 2024.",
+        "evidence_source": "UK Parliament and Downing Street Records",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-07-06"
+        },
+        "freshness": "STALE",
+        "annotator_agreement": 0.98,
+        "difficulty": "medium",
+        "hallucination_pattern": "stale_fact"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-007",
+    "domain": "politics",
+    "query": "Who became the Prime Minister of the UK in July 2024?",
+    "llm_response": "Keir Starmer took office as Prime Minister of the United Kingdom on July 5, 2024.",
+    "claims": [
+      {
+        "claim_id": "C007-1",
+        "claim_text": "Keir Starmer took office as Prime Minister of the United Kingdom on July 5, 2024.",
+        "claim_type": "temporal",
+        "gold_label": "SUPPORTED",
+        "evidence": "Keir Starmer assumed office as Prime Minister of the United Kingdom on July 5, 2024 following the 2024 general election.",
+        "evidence_source": "UK Prime Minister Official Office",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-07-06"
+        },
+        "freshness": "CURRENT",
+        "annotator_agreement": 1.0,
+        "difficulty": "easy",
+        "hallucination_pattern": "none"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-008",
+    "domain": "science",
+    "query": "What is the speed of light in vacuum?",
+    "llm_response": "The speed of light in a vacuum is exactly 299,792,458 meters per second.",
+    "claims": [
+      {
+        "claim_id": "C008-1",
+        "claim_text": "The speed of light in a vacuum is exactly 299,792,458 meters per second.",
+        "claim_type": "numerical",
+        "gold_label": "SUPPORTED",
+        "evidence": "The speed of light in a vacuum is exactly 299,792,458 meters per second.",
+        "evidence_source": "National Institute of Standards and Technology (NIST)",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2020-01-01"
+        },
+        "freshness": "CURRENT",
+        "annotator_agreement": 1.0,
+        "difficulty": "easy",
+        "hallucination_pattern": "none"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-009",
+    "domain": "science",
+    "query": "What is the speed of light in vacuum?",
+    "llm_response": "The speed of light in vacuum is approximately 350,000,000 meters per second.",
+    "claims": [
+      {
+        "claim_id": "C009-1",
+        "claim_text": "The speed of light in vacuum is approximately 350,000,000 meters per second.",
+        "claim_type": "numerical",
+        "gold_label": "CONTRADICTED",
+        "evidence": "The speed of light in a vacuum is exactly 299,792,458 meters per second.",
+        "evidence_source": "National Institute of Standards and Technology (NIST)",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2020-01-01"
+        },
+        "freshness": "CURRENT",
+        "annotator_agreement": 1.0,
+        "difficulty": "easy",
+        "hallucination_pattern": "wrong_number"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-010",
+    "domain": "science",
+    "query": "What is the atomic number of Gold?",
+    "llm_response": "Gold has an atomic number of 79 and chemical symbol Au.",
+    "claims": [
+      {
+        "claim_id": "C010-1",
+        "claim_text": "Gold has an atomic number of 79 and chemical symbol Au.",
+        "claim_type": "numerical",
+        "gold_label": "SUPPORTED",
+        "evidence": "The chemical element Gold has an atomic number of 79 and chemical symbol Au.",
+        "evidence_source": "IUPAC Periodic Table of Elements",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2020-01-01"
+        },
+        "freshness": "CURRENT",
+        "annotator_agreement": 1.0,
+        "difficulty": "easy",
+        "hallucination_pattern": "none"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-011",
+    "domain": "science",
+    "query": "What is the atomic number of Gold?",
+    "llm_response": "Gold has an atomic number of 47.",
+    "claims": [
+      {
+        "claim_id": "C011-1",
+        "claim_text": "Gold has an atomic number of 47.",
+        "claim_type": "numerical",
+        "gold_label": "CONTRADICTED",
+        "evidence": "The chemical element Gold has an atomic number of 79 and chemical symbol Au.",
+        "evidence_source": "IUPAC Periodic Table of Elements",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2020-01-01"
+        },
+        "freshness": "CURRENT",
+        "annotator_agreement": 1.0,
+        "difficulty": "easy",
+        "hallucination_pattern": "wrong_number"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-012",
+    "domain": "astronomy",
+    "query": "What is the Earth's position from the Sun?",
+    "llm_response": "Earth is the third planet from the Sun.",
+    "claims": [
+      {
+        "claim_id": "C012-1",
+        "claim_text": "Earth is the third planet from the Sun.",
+        "claim_type": "numerical",
+        "gold_label": "SUPPORTED",
+        "evidence": "The Earth is the third planet from the Sun and the only astronomical object known to harbor life.",
+        "evidence_source": "NASA Solar System Exploration",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2022-01-01"
+        },
+        "freshness": "CURRENT",
+        "annotator_agreement": 1.0,
+        "difficulty": "easy",
+        "hallucination_pattern": "none"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-013",
+    "domain": "history",
+    "query": "When did World War II end in Europe?",
+    "llm_response": "World War II in Europe ended on May 8, 1945.",
+    "claims": [
+      {
+        "claim_id": "C013-1",
+        "claim_text": "World War II in Europe ended on May 8, 1945.",
+        "claim_type": "temporal",
+        "gold_label": "SUPPORTED",
+        "evidence": "World War II in Europe formally ended on May 8, 1945 (Victory in Europe Day) with the unconditional surrender of Nazi Germany.",
+        "evidence_source": "National Archives and Records Administration (NARA)",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2020-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "annotator_agreement": 1.0,
+        "difficulty": "easy",
+        "hallucination_pattern": "none"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-014",
+    "domain": "history",
+    "query": "When did Apollo 11 land on the moon?",
+    "llm_response": "Apollo 11 landed on the moon on July 20, 1969.",
+    "claims": [
+      {
+        "claim_id": "C014-1",
+        "claim_text": "Apollo 11 landed on the moon on July 20, 1969.",
+        "claim_type": "temporal",
+        "gold_label": "SUPPORTED",
+        "evidence": "The Apollo 11 Lunar Module Eagle landed on the Moon on July 20, 1969, and Neil Armstrong became the first human to step onto the lunar surface.",
+        "evidence_source": "NASA History Division",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2020-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "annotator_agreement": 1.0,
+        "difficulty": "easy",
+        "hallucination_pattern": "none"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-015",
+    "domain": "history",
+    "query": "When did Apollo 11 land on the moon?",
+    "llm_response": "The Apollo 11 moon landing occurred in 1974.",
+    "claims": [
+      {
+        "claim_id": "C015-1",
+        "claim_text": "The Apollo 11 moon landing occurred in 1974.",
+        "claim_type": "temporal",
+        "gold_label": "CONTRADICTED",
+        "evidence": "The Apollo 11 Lunar Module Eagle landed on the Moon on July 20, 1969, and Neil Armstrong became the first human to step onto the lunar surface.",
+        "evidence_source": "NASA History Division",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2020-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "annotator_agreement": 1.0,
+        "difficulty": "easy",
+        "hallucination_pattern": "wrong_date"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-016",
+    "domain": "geography",
+    "query": "What is the capital of Australia?",
+    "llm_response": "Canberra is the capital of Australia.",
+    "claims": [
+      {
+        "claim_id": "C016-1",
+        "claim_text": "Canberra is the capital of Australia.",
+        "claim_type": "geographic",
+        "gold_label": "SUPPORTED",
+        "evidence": "Canberra is the official capital city of Australia, founded in 1913 as a compromise between Sydney and Melbourne.",
+        "evidence_source": "Geoscience Australia & National Capital Authority",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2021-01-01"
+        },
+        "freshness": "CURRENT",
+        "annotator_agreement": 1.0,
+        "difficulty": "easy",
+        "hallucination_pattern": "none"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-017",
+    "domain": "geography",
+    "query": "What is the capital of Australia?",
+    "llm_response": "The capital city of Australia is Sydney.",
+    "claims": [
+      {
+        "claim_id": "C017-1",
+        "claim_text": "The capital city of Australia is Sydney.",
+        "claim_type": "geographic",
+        "gold_label": "CONTRADICTED",
+        "evidence": "Canberra is the official capital city of Australia, founded in 1913 as a compromise between Sydney and Melbourne.",
+        "evidence_source": "Geoscience Australia & National Capital Authority",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2021-01-01"
+        },
+        "freshness": "CURRENT",
+        "annotator_agreement": 1.0,
+        "difficulty": "easy",
+        "hallucination_pattern": "wrong_location"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-018",
+    "domain": "geography",
+    "query": "What is the elevation of Mount Everest?",
+    "llm_response": "Mount Everest has an elevation of 8,848.86 meters.",
+    "claims": [
+      {
+        "claim_id": "C018-1",
+        "claim_text": "Mount Everest has an elevation of 8,848.86 meters.",
+        "claim_type": "numerical",
+        "gold_label": "SUPPORTED",
+        "evidence": "Mount Everest is Earth's highest mountain above sea level, with an officially surveyed elevation of 8,848.86 meters (29,031.7 ft).",
+        "evidence_source": "Survey Department of Nepal & Ministry of Natural Resources China Joint Declaration",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2020-12-08"
+        },
+        "freshness": "CURRENT",
+        "annotator_agreement": 1.0,
+        "difficulty": "easy",
+        "hallucination_pattern": "none"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-019",
+    "domain": "unverified_general",
+    "query": "Tell me about Dr. Arthur Pendelton's 1994 invention in Zurich.",
+    "llm_response": "Dr. Arthur Pendelton invented the quantum acoustic resonator at ETH Zurich in 1994.",
+    "claims": [
+      {
+        "claim_id": "C019-1",
+        "claim_text": "Dr. Arthur Pendelton invented the quantum acoustic resonator at ETH Zurich in 1994.",
+        "claim_type": "attribution",
+        "gold_label": "UNVERIFIED",
+        "evidence": null,
+        "evidence_source": null,
+        "provenance": {
+          "source_type": "synthesized",
+          "verified": false,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "UNKNOWN",
+        "annotator_agreement": 0.9,
+        "difficulty": "hard",
+        "hallucination_pattern": "fabricated_reference"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-020",
+    "domain": "unverified_general",
+    "query": "What is the secret subterranean railway in Valpara\u00edso?",
+    "llm_response": "The Valpara\u00edso subterranean railway was commissioned in 1888 by Don Fernando Alvarez.",
+    "claims": [
+      {
+        "claim_id": "C020-1",
+        "claim_text": "The Valpara\u00edso subterranean railway was commissioned in 1888 by Don Fernando Alvarez.",
+        "claim_type": "attribution",
+        "gold_label": "UNVERIFIED",
+        "evidence": null,
+        "evidence_source": null,
+        "provenance": {
+          "source_type": "synthesized",
+          "verified": false,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "UNKNOWN",
+        "annotator_agreement": 0.92,
+        "difficulty": "hard",
+        "hallucination_pattern": "fictional_entity"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-021",
+    "domain": "unverified_general",
+    "query": "Who discovered the deep sea bioluminescent hydra in Lake Baikal?",
+    "llm_response": "Biologist Elena Rostova discovered the Lake Baikal bioluminescent hydra in 2012.",
+    "claims": [
+      {
+        "claim_id": "C021-1",
+        "claim_text": "Biologist Elena Rostova discovered the Lake Baikal bioluminescent hydra in 2012.",
+        "claim_type": "attribution",
+        "gold_label": "UNVERIFIED",
+        "evidence": null,
+        "evidence_source": null,
+        "provenance": {
+          "source_type": "synthesized",
+          "verified": false,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "UNKNOWN",
+        "annotator_agreement": 0.95,
+        "difficulty": "hard",
+        "hallucination_pattern": "fabricated_discovery"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-022",
+    "domain": "unverified_general",
+    "query": "What is the chemical composition of Xenorhodium?",
+    "llm_response": "Xenorhodium contains a stable covalent bond between Xenon and Rhodium synthesized in 2021.",
+    "claims": [
+      {
+        "claim_id": "C022-1",
+        "claim_text": "Xenorhodium contains a stable covalent bond between Xenon and Rhodium synthesized in 2021.",
+        "claim_type": "factual",
+        "gold_label": "UNVERIFIED",
+        "evidence": null,
+        "evidence_source": null,
+        "provenance": {
+          "source_type": "synthesized",
+          "verified": false,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "UNKNOWN",
+        "annotator_agreement": 0.9,
+        "difficulty": "hard",
+        "hallucination_pattern": "fictional_compound"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-023",
+    "domain": "mixed",
+    "query": "Tell me about Tesla's founding and CEO.",
+    "llm_response": "Tesla was founded in 2003, and Steve Jobs is its current CEO.",
+    "claims": [
+      {
+        "claim_id": "C023-1",
+        "claim_text": "Tesla was founded in 2003.",
+        "claim_type": "temporal",
+        "gold_label": "SUPPORTED",
+        "evidence": "Tesla, Inc. was incorporated and founded on July 1, 2003 by Martin Eberhard and Marc Tarpenning in San Carlos, California.",
+        "evidence_source": "Tesla Corporate Historical Filings & SEC Record",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2023-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "annotator_agreement": 1.0,
+        "difficulty": "easy",
+        "hallucination_pattern": "none"
+      },
+      {
+        "claim_id": "C023-2",
+        "claim_text": "Steve Jobs is the current CEO of Tesla.",
+        "claim_type": "entity",
+        "gold_label": "CONTRADICTED",
+        "evidence": "Elon Musk joined Tesla in February 2004 as Chairman of the Board after leading Series A funding, and assumed the role of CEO in October 2008.",
+        "evidence_source": "Tesla Official Press Release Archive",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2023-01-01"
+        },
+        "freshness": "CURRENT",
+        "annotator_agreement": 1.0,
+        "difficulty": "easy",
+        "hallucination_pattern": "wrong_entity"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-024",
+    "domain": "adversarial",
+    "query": "Is it true that Gold has atomic number 80 because it precedes Mercury?",
+    "llm_response": "Yes, Gold has an atomic number of 80.",
+    "claims": [
+      {
+        "claim_id": "C024-1",
+        "claim_text": "Gold has an atomic number of 80.",
+        "claim_type": "numerical",
+        "gold_label": "CONTRADICTED",
+        "evidence": "The chemical element Gold has an atomic number of 79 and chemical symbol Au.",
+        "evidence_source": "IUPAC Periodic Table of Elements",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2020-01-01"
+        },
+        "freshness": "CURRENT",
+        "annotator_agreement": 1.0,
+        "difficulty": "medium",
+        "hallucination_pattern": "adversarial_number"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-025",
+    "domain": "unverified_general",
+    "query": "Who won the 2038 global renewable energy championship?",
+    "llm_response": "The 2038 renewable championship was won by Solaria Dynamics.",
+    "claims": [
+      {
+        "claim_id": "C025-1",
+        "claim_text": "The 2038 renewable championship was won by Solaria Dynamics.",
+        "claim_type": "attribution",
+        "gold_label": "UNVERIFIED",
+        "evidence": null,
+        "evidence_source": null,
+        "provenance": {
+          "source_type": "synthesized",
+          "verified": false,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "UNKNOWN",
+        "annotator_agreement": 1.0,
+        "difficulty": "medium",
+        "hallucination_pattern": "future_assertion"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-001",
+    "domain": "science",
+    "query": "At what temperature does water boil?",
+    "llm_response": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+    "claims": [
+      {
+        "claim_id": "C026-1",
+        "claim_text": "Water boils at 100 degrees Celsius under standard atmospheric pressure.",
+        "claim_type": "numerical",
+        "gold_label": "SUPPORTED",
+        "evidence": "Water boils at exactly 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure (1 atm).",
+        "evidence_source": "NIST Chemistry WebBook",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "CURRENT",
+        "difficulty": "easy",
+        "hallucination_pattern": "faithful"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-002",
+    "domain": "science",
+    "query": "At what temperature does water boil?",
+    "llm_response": "Water boils at 145 degrees Celsius at normal sea level pressure.",
+    "claims": [
+      {
+        "claim_id": "C027-1",
+        "claim_text": "Water boils at 145 degrees Celsius at normal sea level pressure.",
+        "claim_type": "numerical",
+        "gold_label": "CONTRADICTED",
+        "evidence": "Water boils at exactly 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure (1 atm).",
+        "evidence_source": "NIST Chemistry WebBook",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "CURRENT",
+        "difficulty": "easy",
+        "hallucination_pattern": "wrong_number"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-003",
+    "domain": "medicine",
+    "query": "Who discovered penicillin and when?",
+    "llm_response": "Alexander Fleming discovered penicillin in 1928.",
+    "claims": [
+      {
+        "claim_id": "C028-1",
+        "claim_text": "Alexander Fleming discovered penicillin in 1928.",
+        "claim_type": "temporal",
+        "gold_label": "SUPPORTED",
+        "evidence": "Alexander Fleming discovered penicillin in September 1928 at St. Mary's Hospital in London.",
+        "evidence_source": "Nobel Prize in Physiology or Medicine Archives",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "easy",
+        "hallucination_pattern": "faithful"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-004",
+    "domain": "medicine",
+    "query": "Who discovered penicillin?",
+    "llm_response": "Penicillin was discovered by Louis Pasteur in 1945.",
+    "claims": [
+      {
+        "claim_id": "C029-1",
+        "claim_text": "Penicillin was discovered by Louis Pasteur.",
+        "claim_type": "attribution",
+        "gold_label": "CONTRADICTED",
+        "evidence": "Alexander Fleming discovered penicillin in September 1928 at St. Mary's Hospital in London.",
+        "evidence_source": "Nobel Prize in Physiology or Medicine Archives",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "medium",
+        "hallucination_pattern": "wrong_attribution"
+      },
+      {
+        "claim_id": "C029-2",
+        "claim_text": "Penicillin was discovered in 1945.",
+        "claim_type": "temporal",
+        "gold_label": "CONTRADICTED",
+        "evidence": "Alexander Fleming discovered penicillin in September 1928 at St. Mary's Hospital in London.",
+        "evidence_source": "Nobel Prize in Physiology or Medicine Archives",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "medium",
+        "hallucination_pattern": "wrong_date"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-005",
+    "domain": "geography",
+    "query": "What is the capital of Canada?",
+    "llm_response": "The capital city of Canada is Ottawa.",
+    "claims": [
+      {
+        "claim_id": "C030-1",
+        "claim_text": "The capital city of Canada is Ottawa.",
+        "claim_type": "geographic",
+        "gold_label": "SUPPORTED",
+        "evidence": "Ottawa is the official capital city of Canada, designated by Queen Victoria in 1857.",
+        "evidence_source": "Government of Canada Historical Records",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "CURRENT",
+        "difficulty": "easy",
+        "hallucination_pattern": "faithful"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-006",
+    "domain": "geography",
+    "query": "What is the capital of Canada?",
+    "llm_response": "The capital city of Canada is Toronto.",
+    "claims": [
+      {
+        "claim_id": "C031-1",
+        "claim_text": "The capital city of Canada is Toronto.",
+        "claim_type": "geographic",
+        "gold_label": "CONTRADICTED",
+        "evidence": "Ottawa is the official capital city of Canada, designated by Queen Victoria in 1857.",
+        "evidence_source": "Government of Canada Historical Records",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "CURRENT",
+        "difficulty": "easy",
+        "hallucination_pattern": "wrong_entity"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-007",
+    "domain": "geography",
+    "query": "What is the capital of Brazil?",
+    "llm_response": "The capital of Brazil is Rio de Janeiro.",
+    "claims": [
+      {
+        "claim_id": "C032-1",
+        "claim_text": "The capital of Brazil is Rio de Janeiro.",
+        "claim_type": "geographic",
+        "gold_label": "CONTRADICTED",
+        "evidence": "Brasilia is the official federal capital city of Brazil, inaugurated on April 21, 1960.",
+        "evidence_source": "IBGE Brazilian Institute of Geography and Statistics",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "CURRENT",
+        "difficulty": "medium",
+        "hallucination_pattern": "wrong_entity"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-008",
+    "domain": "technology",
+    "query": "When was Python created?",
+    "llm_response": "Python was created by Guido van Rossum in 1991.",
+    "claims": [
+      {
+        "claim_id": "C033-1",
+        "claim_text": "Python was created by Guido van Rossum.",
+        "claim_type": "attribution",
+        "gold_label": "SUPPORTED",
+        "evidence": "Python was created by Guido van Rossum and first released in February 1991.",
+        "evidence_source": "Python Software Foundation",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "easy",
+        "hallucination_pattern": "faithful"
+      },
+      {
+        "claim_id": "C033-2",
+        "claim_text": "Python was created in 1991.",
+        "claim_type": "temporal",
+        "gold_label": "SUPPORTED",
+        "evidence": "Python was created by Guido van Rossum and first released in February 1991.",
+        "evidence_source": "Python Software Foundation",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "easy",
+        "hallucination_pattern": "faithful"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-009",
+    "domain": "technology",
+    "query": "Who created Linux and when?",
+    "llm_response": "Linux was created by Linus Torvalds in 1991.",
+    "claims": [
+      {
+        "claim_id": "C034-1",
+        "claim_text": "The Linux kernel was created by Linus Torvalds.",
+        "claim_type": "attribution",
+        "gold_label": "SUPPORTED",
+        "evidence": "The Linux kernel was created by Linus Torvalds and first publicly released on September 17, 1991.",
+        "evidence_source": "The Linux Foundation Archives",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "easy",
+        "hallucination_pattern": "faithful"
+      },
+      {
+        "claim_id": "C034-2",
+        "claim_text": "The Linux kernel was created in 1991.",
+        "claim_type": "temporal",
+        "gold_label": "SUPPORTED",
+        "evidence": "The Linux kernel was created by Linus Torvalds and first publicly released on September 17, 1991.",
+        "evidence_source": "The Linux Foundation Archives",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "easy",
+        "hallucination_pattern": "faithful"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-010",
+    "domain": "technology",
+    "query": "Who created Linux?",
+    "llm_response": "The Linux kernel was created by Richard Stallman in 1985.",
+    "claims": [
+      {
+        "claim_id": "C035-1",
+        "claim_text": "The Linux kernel was created by Richard Stallman.",
+        "claim_type": "attribution",
+        "gold_label": "CONTRADICTED",
+        "evidence": "The Linux kernel was created by Linus Torvalds and first publicly released on September 17, 1991.",
+        "evidence_source": "The Linux Foundation Archives",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "medium",
+        "hallucination_pattern": "wrong_attribution"
+      },
+      {
+        "claim_id": "C035-2",
+        "claim_text": "The Linux kernel was created in 1985.",
+        "claim_type": "temporal",
+        "gold_label": "CONTRADICTED",
+        "evidence": "The Linux kernel was created by Linus Torvalds and first publicly released on September 17, 1991.",
+        "evidence_source": "The Linux Foundation Archives",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "medium",
+        "hallucination_pattern": "wrong_date"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-011",
+    "domain": "history",
+    "query": "When did the Berlin Wall fall?",
+    "llm_response": "The Berlin Wall fell on November 9, 1989.",
+    "claims": [
+      {
+        "claim_id": "C036-1",
+        "claim_text": "The Berlin Wall fell on November 9, 1989.",
+        "claim_type": "temporal",
+        "gold_label": "SUPPORTED",
+        "evidence": "The Berlin Wall fell on November 9, 1989, marking the symbolic end of the Cold War in Europe.",
+        "evidence_source": "German Historical Museum",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "easy",
+        "hallucination_pattern": "faithful"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-012",
+    "domain": "history",
+    "query": "When did the Berlin Wall fall?",
+    "llm_response": "The Berlin Wall fell in 1975.",
+    "claims": [
+      {
+        "claim_id": "C037-1",
+        "claim_text": "The Berlin Wall fell in 1975.",
+        "claim_type": "temporal",
+        "gold_label": "CONTRADICTED",
+        "evidence": "The Berlin Wall fell on November 9, 1989, marking the symbolic end of the Cold War in Europe.",
+        "evidence_source": "German Historical Museum",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "easy",
+        "hallucination_pattern": "wrong_date"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-013",
+    "domain": "science",
+    "query": "Why did Einstein win the Nobel Prize?",
+    "llm_response": "Albert Einstein won the 1921 Nobel Prize in Physics for General Relativity.",
+    "claims": [
+      {
+        "claim_id": "C038-1",
+        "claim_text": "Albert Einstein won the 1921 Nobel Prize in Physics for General Relativity.",
+        "claim_type": "attribution",
+        "gold_label": "CONTRADICTED",
+        "evidence": "Albert Einstein received the 1921 Nobel Prize in Physics for his explanation of the photoelectric effect, not for the theory of relativity.",
+        "evidence_source": "Nobel Prize in Physics Official Archive",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "hard",
+        "hallucination_pattern": "subtle_misconception"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-014",
+    "domain": "science",
+    "query": "Why did Einstein win the Nobel Prize?",
+    "llm_response": "Albert Einstein received the Nobel Prize in Physics for his work on the photoelectric effect.",
+    "claims": [
+      {
+        "claim_id": "C039-1",
+        "claim_text": "Albert Einstein received the Nobel Prize in Physics for his work on the photoelectric effect.",
+        "claim_type": "factual",
+        "gold_label": "SUPPORTED",
+        "evidence": "Albert Einstein received the 1921 Nobel Prize in Physics for his explanation of the photoelectric effect, not for the theory of relativity.",
+        "evidence_source": "Nobel Prize in Physics Official Archive",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "medium",
+        "hallucination_pattern": "faithful"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-015",
+    "domain": "unverified",
+    "query": "Who won the 2048 lunar marathon?",
+    "llm_response": "Captain Sarah Vance won the 2048 lunar marathon in Shackleton Crater.",
+    "claims": [
+      {
+        "claim_id": "C040-1",
+        "claim_text": "Captain Sarah Vance won the 2048 lunar marathon in Shackleton Crater.",
+        "claim_type": "entity",
+        "gold_label": "UNVERIFIED",
+        "evidence": null,
+        "evidence_source": null,
+        "provenance": {},
+        "freshness": "UNKNOWN",
+        "difficulty": "easy",
+        "hallucination_pattern": "complete_fabrication"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-016",
+    "domain": "unverified",
+    "query": "Tell me about the hyper-quantum transistor.",
+    "llm_response": "The hyper-quantum transistor was patented by Dr. Aris Thorne at Cambridge in 2029.",
+    "claims": [
+      {
+        "claim_id": "C041-1",
+        "claim_text": "The hyper-quantum transistor was patented by Dr. Aris Thorne at Cambridge in 2029.",
+        "claim_type": "temporal",
+        "gold_label": "UNVERIFIED",
+        "evidence": null,
+        "evidence_source": null,
+        "provenance": {},
+        "freshness": "UNKNOWN",
+        "difficulty": "easy",
+        "hallucination_pattern": "complete_fabrication"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-017",
+    "domain": "adversarial",
+    "query": "Did Apollo 11 land on the moon?",
+    "llm_response": "It is not untrue that Apollo 11 landed on the moon on July 20, 1969.",
+    "claims": [
+      {
+        "claim_id": "C042-1",
+        "claim_text": "It is not untrue that Apollo 11 landed on the moon on July 20, 1969.",
+        "claim_type": "temporal",
+        "gold_label": "SUPPORTED",
+        "evidence": "The Apollo 11 Lunar Module Eagle landed on the Moon on July 20, 1969, and Neil Armstrong became the first human to step onto the lunar surface.",
+        "evidence_source": "NASA Apollo 11 Mission Overview",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "hard",
+        "hallucination_pattern": "double_negation"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-018",
+    "domain": "history",
+    "query": "When was the US Declaration of Independence signed?",
+    "llm_response": "The Declaration of Independence was ratified on July 4, 1776.",
+    "claims": [
+      {
+        "claim_id": "C043-1",
+        "claim_text": "The Declaration of Independence was ratified on July 4, 1776.",
+        "claim_type": "temporal",
+        "gold_label": "SUPPORTED",
+        "evidence": "The United States Declaration of Independence was ratified on July 4, 1776 by the Second Continental Congress.",
+        "evidence_source": "US National Archives and Records Administration",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "easy",
+        "hallucination_pattern": "faithful"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-019",
+    "domain": "history",
+    "query": "When was the US Declaration of Independence signed?",
+    "llm_response": "The Declaration of Independence was signed on July 4, 1812.",
+    "claims": [
+      {
+        "claim_id": "C044-1",
+        "claim_text": "The Declaration of Independence was signed on July 4, 1812.",
+        "claim_type": "temporal",
+        "gold_label": "CONTRADICTED",
+        "evidence": "The United States Declaration of Independence was ratified on July 4, 1776 by the Second Continental Congress.",
+        "evidence_source": "US National Archives and Records Administration",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "easy",
+        "hallucination_pattern": "wrong_date"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-020",
+    "domain": "technology",
+    "query": "Who invented the World Wide Web?",
+    "llm_response": "The World Wide Web was invented by Tim Berners-Lee in 1989 at CERN.",
+    "claims": [
+      {
+        "claim_id": "C045-1",
+        "claim_text": "The World Wide Web was invented by Tim Berners-Lee in 1989 at CERN.",
+        "claim_type": "attribution",
+        "gold_label": "SUPPORTED",
+        "evidence": "The World Wide Web was invented by Tim Berners-Lee in 1989 at CERN.",
+        "evidence_source": "CERN Document Server",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "easy",
+        "hallucination_pattern": "faithful"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-021",
+    "domain": "science",
+    "query": "How many chromosomes do humans have?",
+    "llm_response": "Humans have 46 chromosomes in each somatic cell.",
+    "claims": [
+      {
+        "claim_id": "C046-1",
+        "claim_text": "Humans typically have 46 chromosomes in each diploid cell.",
+        "claim_type": "numerical",
+        "gold_label": "SUPPORTED",
+        "evidence": "Humans typically have 46 chromosomes in 23 pairs in each diploid cell.",
+        "evidence_source": "National Human Genome Research Institute (NHGRI)",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "CURRENT",
+        "difficulty": "easy",
+        "hallucination_pattern": "faithful"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-022",
+    "domain": "science",
+    "query": "How many chromosomes do humans have?",
+    "llm_response": "Humans have 48 chromosomes in each body cell.",
+    "claims": [
+      {
+        "claim_id": "C047-1",
+        "claim_text": "Humans typically have 48 chromosomes in each diploid cell.",
+        "claim_type": "numerical",
+        "gold_label": "CONTRADICTED",
+        "evidence": "Humans typically have 46 chromosomes in 23 pairs in each diploid cell.",
+        "evidence_source": "National Human Genome Research Institute (NHGRI)",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "CURRENT",
+        "difficulty": "easy",
+        "hallucination_pattern": "wrong_number"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-023",
+    "domain": "history",
+    "query": "Who was the first human in space?",
+    "llm_response": "Yuri Gagarin became the first human in outer space in 1961.",
+    "claims": [
+      {
+        "claim_id": "C048-1",
+        "claim_text": "Yuri Gagarin became the first human in outer space in 1961.",
+        "claim_type": "temporal",
+        "gold_label": "SUPPORTED",
+        "evidence": "Yuri Gagarin became the first human in outer space on April 12, 1961 aboard Vostok 1.",
+        "evidence_source": "NASA History Division",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "easy",
+        "hallucination_pattern": "faithful"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-024",
+    "domain": "history",
+    "query": "Who was the first human in space?",
+    "llm_response": "John Glenn became the first human in outer space in 1959.",
+    "claims": [
+      {
+        "claim_id": "C049-1",
+        "claim_text": "John Glenn became the first human in outer space.",
+        "claim_type": "attribution",
+        "gold_label": "CONTRADICTED",
+        "evidence": "Yuri Gagarin became the first human in outer space on April 12, 1961 aboard Vostok 1.",
+        "evidence_source": "NASA History Division",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "medium",
+        "hallucination_pattern": "wrong_attribution"
+      },
+      {
+        "claim_id": "C049-2",
+        "claim_text": "The first human spaceflight occurred in 1959.",
+        "claim_type": "temporal",
+        "gold_label": "CONTRADICTED",
+        "evidence": "Yuri Gagarin became the first human in outer space on April 12, 1961 aboard Vostok 1.",
+        "evidence_source": "NASA History Division",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "medium",
+        "hallucination_pattern": "wrong_date"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-025",
+    "domain": "history",
+    "query": "When did Titanic sink?",
+    "llm_response": "The Titanic sank on April 15, 1912 after striking an iceberg.",
+    "claims": [
+      {
+        "claim_id": "C050-1",
+        "claim_text": "The RMS Titanic sank on April 15, 1912.",
+        "claim_type": "temporal",
+        "gold_label": "SUPPORTED",
+        "evidence": "The RMS Titanic sank in the North Atlantic Ocean on April 15, 1912 after colliding with an iceberg.",
+        "evidence_source": "British Board of Trade Inquiry",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "easy",
+        "hallucination_pattern": "faithful"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-026",
+    "domain": "history",
+    "query": "When did Titanic sink?",
+    "llm_response": "The Titanic sank in 1905 during a storm.",
+    "claims": [
+      {
+        "claim_id": "C051-1",
+        "claim_text": "The RMS Titanic sank in 1905.",
+        "claim_type": "temporal",
+        "gold_label": "CONTRADICTED",
+        "evidence": "The RMS Titanic sank in the North Atlantic Ocean on April 15, 1912 after colliding with an iceberg.",
+        "evidence_source": "British Board of Trade Inquiry",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "easy",
+        "hallucination_pattern": "wrong_date"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-027",
+    "domain": "technology",
+    "query": "Who founded Google and when?",
+    "llm_response": "Google was founded in 1998 by Larry Page and Sergey Brin.",
+    "claims": [
+      {
+        "claim_id": "C052-1",
+        "claim_text": "Google was founded in 1998.",
+        "claim_type": "temporal",
+        "gold_label": "SUPPORTED",
+        "evidence": "Google was founded on September 4, 1998 by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University.",
+        "evidence_source": "Alphabet Inc. Investor Relations & SEC Filings",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "easy",
+        "hallucination_pattern": "faithful"
+      },
+      {
+        "claim_id": "C052-2",
+        "claim_text": "Google was founded by Larry Page and Sergey Brin.",
+        "claim_type": "attribution",
+        "gold_label": "SUPPORTED",
+        "evidence": "Google was founded on September 4, 1998 by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University.",
+        "evidence_source": "Alphabet Inc. Investor Relations & SEC Filings",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "easy",
+        "hallucination_pattern": "faithful"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-028",
+    "domain": "technology",
+    "query": "Who founded Google?",
+    "llm_response": "Google was founded in 1991 by Mark Zuckerberg.",
+    "claims": [
+      {
+        "claim_id": "C053-1",
+        "claim_text": "Google was founded by Mark Zuckerberg.",
+        "claim_type": "attribution",
+        "gold_label": "CONTRADICTED",
+        "evidence": "Google was founded on September 4, 1998 by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University.",
+        "evidence_source": "Alphabet Inc. Investor Relations & SEC Filings",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "medium",
+        "hallucination_pattern": "wrong_attribution"
+      },
+      {
+        "claim_id": "C053-2",
+        "claim_text": "Google was founded in 1991.",
+        "claim_type": "temporal",
+        "gold_label": "CONTRADICTED",
+        "evidence": "Google was founded on September 4, 1998 by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University.",
+        "evidence_source": "Alphabet Inc. Investor Relations & SEC Filings",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "medium",
+        "hallucination_pattern": "wrong_date"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-029",
+    "domain": "technology",
+    "query": "Who founded Microsoft and when?",
+    "llm_response": "Microsoft was founded in 1975 by Bill Gates and Paul Allen.",
+    "claims": [
+      {
+        "claim_id": "C054-1",
+        "claim_text": "Microsoft was founded in 1975.",
+        "claim_type": "temporal",
+        "gold_label": "SUPPORTED",
+        "evidence": "Microsoft was founded on April 4, 1975 by Bill Gates and Paul Allen in Albuquerque, New Mexico.",
+        "evidence_source": "Microsoft Corporate History",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "easy",
+        "hallucination_pattern": "faithful"
+      },
+      {
+        "claim_id": "C054-2",
+        "claim_text": "Microsoft was founded by Bill Gates and Paul Allen.",
+        "claim_type": "attribution",
+        "gold_label": "SUPPORTED",
+        "evidence": "Microsoft was founded on April 4, 1975 by Bill Gates and Paul Allen in Albuquerque, New Mexico.",
+        "evidence_source": "Microsoft Corporate History",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "easy",
+        "hallucination_pattern": "faithful"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-030",
+    "domain": "technology",
+    "query": "Who founded Microsoft?",
+    "llm_response": "Microsoft was founded in 1982 by Steve Jobs.",
+    "claims": [
+      {
+        "claim_id": "C055-1",
+        "claim_text": "Microsoft was founded by Steve Jobs.",
+        "claim_type": "attribution",
+        "gold_label": "CONTRADICTED",
+        "evidence": "Microsoft was founded on April 4, 1975 by Bill Gates and Paul Allen in Albuquerque, New Mexico.",
+        "evidence_source": "Microsoft Corporate History",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "medium",
+        "hallucination_pattern": "wrong_attribution"
+      },
+      {
+        "claim_id": "C055-2",
+        "claim_text": "Microsoft was founded in 1982.",
+        "claim_type": "temporal",
+        "gold_label": "CONTRADICTED",
+        "evidence": "Microsoft was founded on April 4, 1975 by Bill Gates and Paul Allen in Albuquerque, New Mexico.",
+        "evidence_source": "Microsoft Corporate History",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "HISTORICAL",
+        "difficulty": "medium",
+        "hallucination_pattern": "wrong_date"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-031",
+    "domain": "geography",
+    "query": "What is the capital of Japan?",
+    "llm_response": "The capital city of Japan is Tokyo.",
+    "claims": [
+      {
+        "claim_id": "C056-1",
+        "claim_text": "The capital city of Japan is Tokyo.",
+        "claim_type": "geographic",
+        "gold_label": "SUPPORTED",
+        "evidence": "Tokyo is the official capital city of Japan, serving as the seat of the Japanese Emperor and government.",
+        "evidence_source": "Tokyo Metropolitan Government",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "CURRENT",
+        "difficulty": "easy",
+        "hallucination_pattern": "faithful"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-032",
+    "domain": "geography",
+    "query": "What is the capital of Japan?",
+    "llm_response": "The capital city of Japan is Kyoto.",
+    "claims": [
+      {
+        "claim_id": "C057-1",
+        "claim_text": "The capital city of Japan is Kyoto.",
+        "claim_type": "geographic",
+        "gold_label": "CONTRADICTED",
+        "evidence": "Tokyo is the official capital city of Japan, serving as the seat of the Japanese Emperor and government.",
+        "evidence_source": "Tokyo Metropolitan Government",
+        "provenance": {
+          "source_type": "primary",
+          "verified": true,
+          "timestamp": "2024-01-01"
+        },
+        "freshness": "CURRENT",
+        "difficulty": "easy",
+        "hallucination_pattern": "wrong_entity"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-033",
+    "domain": "unverified",
+    "query": "Who is the lead engineer of the Dyson swarm project?",
+    "llm_response": "Dr. Helena Zhang has been the lead engineer of the Dyson swarm project at MIT since 2031.",
+    "claims": [
+      {
+        "claim_id": "C058-1",
+        "claim_text": "Dr. Helena Zhang has been the lead engineer of the Dyson swarm project at MIT since 2031.",
+        "claim_type": "attribution",
+        "gold_label": "UNVERIFIED",
+        "evidence": null,
+        "evidence_source": null,
+        "provenance": {},
+        "freshness": "UNKNOWN",
+        "difficulty": "easy",
+        "hallucination_pattern": "complete_fabrication"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-034",
+    "domain": "unverified",
+    "query": "What is the cure for chronic chronosomnia?",
+    "llm_response": "Chronic chronosomnia is cured using neuro-somnic frequency modulation developed by BioPhase in 2028.",
+    "claims": [
+      {
+        "claim_id": "C059-1",
+        "claim_text": "Chronic chronosomnia is cured using neuro-somnic frequency modulation developed by BioPhase in 2028.",
+        "claim_type": "factual",
+        "gold_label": "UNVERIFIED",
+        "evidence": null,
+        "evidence_source": null,
+        "provenance": {},
+        "freshness": "UNKNOWN",
+        "difficulty": "easy",
+        "hallucination_pattern": "complete_fabrication"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-035",
+    "domain": "unverified",
+    "query": "Who directed the 2035 film Beyond the Horizon?",
+    "llm_response": "Beyond the Horizon was directed by Christopher Nolan in 2035.",
+    "claims": [
+      {
+        "claim_id": "C060-1",
+        "claim_text": "Beyond the Horizon was directed by Christopher Nolan in 2035.",
+        "claim_type": "temporal",
+        "gold_label": "UNVERIFIED",
+        "evidence": null,
+        "evidence_source": null,
+        "provenance": {},
+        "freshness": "UNKNOWN",
+        "difficulty": "easy",
+        "hallucination_pattern": "future_fabrication"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-036",
+    "domain": "literature",
+    "query": "Who authored The Obsidian Tower in 2027?",
+    "llm_response": "The Obsidian Tower was authored by Jeremy Vance in 2027.",
+    "claims": [
+      {
+        "claim_id": "C110-1",
+        "claim_text": "Jeremy Vance authored The Obsidian Tower in 2027.",
+        "claim_type": "attribution",
+        "gold_label": "UNVERIFIED",
+        "evidence": null,
+        "evidence_source": null,
+        "provenance": {},
+        "freshness": "UNKNOWN",
+        "difficulty": "easy",
+        "hallucination_pattern": "complete_fabrication"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-037",
+    "domain": "medicine",
+    "query": "What is the dosage of Lunaderm?",
+    "llm_response": "Lunaderm is prescribed at 50mg daily for nocturnal dermatitis.",
+    "claims": [
+      {
+        "claim_id": "C111-1",
+        "claim_text": "Lunaderm is prescribed at 50mg daily for nocturnal dermatitis.",
+        "claim_type": "numerical",
+        "gold_label": "UNVERIFIED",
+        "evidence": null,
+        "evidence_source": null,
+        "provenance": {},
+        "freshness": "UNKNOWN",
+        "difficulty": "easy",
+        "hallucination_pattern": "complete_fabrication"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-038",
+    "domain": "technology",
+    "query": "Who created the Zephyr quantum compiler?",
+    "llm_response": "The Zephyr quantum compiler was created by Dr. Mira Patel at Oxford in 2030.",
+    "claims": [
+      {
+        "claim_id": "C112-1",
+        "claim_text": "The Zephyr quantum compiler was created by Dr. Mira Patel.",
+        "claim_type": "attribution",
+        "gold_label": "UNVERIFIED",
+        "evidence": null,
+        "evidence_source": null,
+        "provenance": {},
+        "freshness": "UNKNOWN",
+        "difficulty": "easy",
+        "hallucination_pattern": "complete_fabrication"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-039",
+    "domain": "astronomy",
+    "query": "When was the exoplanet Kepler-999b discovered?",
+    "llm_response": "Kepler-999b was discovered by the James Webb Space Telescope in 2032.",
+    "claims": [
+      {
+        "claim_id": "C113-1",
+        "claim_text": "Kepler-999b was discovered in 2032.",
+        "claim_type": "temporal",
+        "gold_label": "UNVERIFIED",
+        "evidence": null,
+        "evidence_source": null,
+        "provenance": {},
+        "freshness": "UNKNOWN",
+        "difficulty": "easy",
+        "hallucination_pattern": "complete_fabrication"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-040",
+    "domain": "history",
+    "query": "When was the Treaty of Oakhaven signed?",
+    "llm_response": "The Treaty of Oakhaven was signed between Saxony and Prussia in 1642.",
+    "claims": [
+      {
+        "claim_id": "C114-1",
+        "claim_text": "The Treaty of Oakhaven was signed in 1642.",
+        "claim_type": "temporal",
+        "gold_label": "UNVERIFIED",
+        "evidence": null,
+        "evidence_source": null,
+        "provenance": {},
+        "freshness": "UNKNOWN",
+        "difficulty": "easy",
+        "hallucination_pattern": "complete_fabrication"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-041",
+    "domain": "science",
+    "query": "What is the half-life of Element 124?",
+    "llm_response": "Element 124 has an observed half-life of 4.2 seconds.",
+    "claims": [
+      {
+        "claim_id": "C115-1",
+        "claim_text": "Element 124 has a half-life of 4.2 seconds.",
+        "claim_type": "numerical",
+        "gold_label": "UNVERIFIED",
+        "evidence": null,
+        "evidence_source": null,
+        "provenance": {},
+        "freshness": "UNKNOWN",
+        "difficulty": "easy",
+        "hallucination_pattern": "complete_fabrication"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-042",
+    "domain": "geography",
+    "query": "What is the capital of Novaland?",
+    "llm_response": "The capital city of Novaland is Port Zenith.",
+    "claims": [
+      {
+        "claim_id": "C116-1",
+        "claim_text": "The capital city of Novaland is Port Zenith.",
+        "claim_type": "geographic",
+        "gold_label": "UNVERIFIED",
+        "evidence": null,
+        "evidence_source": null,
+        "provenance": {},
+        "freshness": "UNKNOWN",
+        "difficulty": "easy",
+        "hallucination_pattern": "complete_fabrication"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-043",
+    "domain": "business",
+    "query": "When was NexusBio acquired?",
+    "llm_response": "NexusBio was acquired by Pfizer for 12 billion dollars in 2033.",
+    "claims": [
+      {
+        "claim_id": "C117-1",
+        "claim_text": "NexusBio was acquired in 2033.",
+        "claim_type": "temporal",
+        "gold_label": "UNVERIFIED",
+        "evidence": null,
+        "evidence_source": null,
+        "provenance": {},
+        "freshness": "UNKNOWN",
+        "difficulty": "easy",
+        "hallucination_pattern": "complete_fabrication"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-044",
+    "domain": "politics",
+    "query": "Who is the premier of the Antarctic Federation?",
+    "llm_response": "Dr. Samuel Vance is the premier of the Antarctic Federation.",
+    "claims": [
+      {
+        "claim_id": "C118-1",
+        "claim_text": "Dr. Samuel Vance is the premier of the Antarctic Federation.",
+        "claim_type": "attribution",
+        "gold_label": "UNVERIFIED",
+        "evidence": null,
+        "evidence_source": null,
+        "provenance": {},
+        "freshness": "UNKNOWN",
+        "difficulty": "easy",
+        "hallucination_pattern": "complete_fabrication"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-045",
+    "domain": "technology",
+    "query": "When was the Rust-X language announced?",
+    "llm_response": "Rust-X was announced by the Mozilla Foundation in 2034.",
+    "claims": [
+      {
+        "claim_id": "C119-1",
+        "claim_text": "Rust-X was announced in 2034.",
+        "claim_type": "temporal",
+        "gold_label": "UNVERIFIED",
+        "evidence": null,
+        "evidence_source": null,
+        "provenance": {},
+        "freshness": "UNKNOWN",
+        "difficulty": "easy",
+        "hallucination_pattern": "complete_fabrication"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-046",
+    "domain": "medicine",
+    "query": "What is the cure for Algic Syndrome?",
+    "llm_response": "Algic Syndrome is treated with neuro-peptide 44.",
+    "claims": [
+      {
+        "claim_id": "C120-1",
+        "claim_text": "Algic Syndrome is treated with neuro-peptide 44.",
+        "claim_type": "factual",
+        "gold_label": "UNVERIFIED",
+        "evidence": null,
+        "evidence_source": null,
+        "provenance": {},
+        "freshness": "UNKNOWN",
+        "difficulty": "easy",
+        "hallucination_pattern": "complete_fabrication"
+      }
+    ]
+  },
+  {
+    "example_id": "BM-EXP-047",
+    "domain": "science",
+    "query": "What is the density of dark plasma?",
+    "llm_response": "Dark plasma has a measured density of 0.003 grams per cubic centimeter.",
+    "claims": [
+      {
+        "claim_id": "C121-1",
+        "claim_text": "Dark plasma has a density of 0.003 grams per cubic centimeter.",
+        "claim_type": "numerical",
+        "gold_label": "UNVERIFIED",
+        "evidence": null,
+        "evidence_source": null,
+        "provenance": {},
+        "freshness": "UNKNOWN",
+        "difficulty": "easy",
+        "hallucination_pattern": "complete_fabrication"
+      }
+    ]
+  }
+]

@@ -1,0 +1,47 @@
+# HalluciGuard-OKF Model Configuration
+model:
+  name: "HalluciGuard-OKF-MultiSignal"
+  version: "1.0.0"
+
+embedding:
+  model_name: "sentence-transformers/all-MiniLM-L6-v2"
+  mode: "tfidf" # Explicitly selected because sentence-transformers is not a core dependency.
+  dimension: 384
+  batch_size: 32
+  device: "cpu"
+  normalize_embeddings: true
+
+retrieval:
+  top_k: 5
+  hybrid_alpha: 0.6 # Weight for dense retrieval vs (1 - alpha) for BM25
+  min_relevance_threshold: 0.35
+
+nli:
+  mode: "rule_based" # Change to transformer only when weights and dependency are available.
+  model_name: "roberta-large-mnli" # Or distilled/lightweight equivalent
+  max_length: 256
+  temperature: 1.0 # Temperature scaling for calibration
+  device: "cpu"
+
+scoring:
+  num_features: 15
+  feature_names:
+    - "semantic_similarity"
+    - "nli_entailment"
+    - "nli_contradiction"
+    - "nli_neutral"
+    - "evidence_coverage"
+    - "source_reliability"
+    - "provenance_confidence"
+    - "freshness_confidence"
+    - "retrieval_confidence"
+    - "claim_extraction_confidence"
+    - "evidence_disagreement"
+    - "evidence_count_normalized"
+    - "source_diversity"
+    - "mean_nli_entailment"
+    - "mean_nli_contradiction"
+  hidden_dims: [64, 32]
+  dropout: 0.20
+  num_classes: 3 # 0: SUPPORTED, 1: CONTRADICTED, 2: UNVERIFIED
+  abstain_threshold: 0.60

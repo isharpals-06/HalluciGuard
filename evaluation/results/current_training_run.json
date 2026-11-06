@@ -1,0 +1,1193 @@
+{
+  "metadata": {
+    "dataset_path": "datasets\\benchmark\\benchmark_data.json",
+    "dataset_sha256": "4703be9bb2a6f0df14000a3b38952ed65f537fee9c24557c5e922f03f0dfb678",
+    "training_config_sha256": "f3ba65f3571f42735fdc46cc8286cfe3d67bf141c5ab1135cdccd3738fb829cd",
+    "model_config_path": "configs/model_config.yaml",
+    "model_config_sha256": "dc2dcd6a3844f4c173a12a47c87de1726776cf55991ba9e634540dd66594efaa",
+    "source_fingerprint_sha256": "63605326fdb8774fb9fc19051646d8dbecce0a1714f4492f21c1f67e102840d4",
+    "python_version": "3.11.15 (main, Jun 11 2026, 04:59:07) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "nli_mode": "rule_based",
+    "dense_retrieval_mode": "tfidf",
+    "evidence_mode": "retrieval",
+    "top_k": 5,
+    "min_relevance_threshold": 0.35,
+    "seed": 42,
+    "split_ratios": {
+      "train": 0.7,
+      "validation": 0.15,
+      "test": 0.15
+    },
+    "split_grouping": "scenario_id",
+    "split_group_ids": {
+      "train": [
+        "BM-002",
+        "BM-003",
+        "BM-004",
+        "BM-007",
+        "BM-008",
+        "BM-009",
+        "BM-012",
+        "BM-014",
+        "BM-015",
+        "BM-016",
+        "BM-018",
+        "BM-020",
+        "BM-021",
+        "BM-022",
+        "BM-024",
+        "BM-025",
+        "BM-EXP-001",
+        "BM-EXP-002",
+        "BM-EXP-003",
+        "BM-EXP-005",
+        "BM-EXP-006",
+        "BM-EXP-008",
+        "BM-EXP-011",
+        "BM-EXP-012",
+        "BM-EXP-013",
+        "BM-EXP-014",
+        "BM-EXP-016",
+        "BM-EXP-017",
+        "BM-EXP-018",
+        "BM-EXP-019",
+        "BM-EXP-020",
+        "BM-EXP-022",
+        "BM-EXP-024",
+        "BM-EXP-027",
+        "BM-EXP-028",
+        "BM-EXP-029",
+        "BM-EXP-031",
+        "BM-EXP-033",
+        "BM-EXP-034",
+        "BM-EXP-036",
+        "BM-EXP-037",
+        "BM-EXP-039",
+        "BM-EXP-040",
+        "BM-EXP-041",
+        "BM-EXP-042",
+        "BM-EXP-043",
+        "BM-EXP-044",
+        "BM-EXP-045",
+        "BM-EXP-046",
+        "BM-EXP-047"
+      ],
+      "validation": [
+        "BM-006",
+        "BM-017",
+        "BM-019",
+        "BM-EXP-004",
+        "BM-EXP-007",
+        "BM-EXP-010",
+        "BM-EXP-021",
+        "BM-EXP-025",
+        "BM-EXP-030",
+        "BM-EXP-032",
+        "BM-EXP-038"
+      ],
+      "test": [
+        "BM-001",
+        "BM-005",
+        "BM-010",
+        "BM-011",
+        "BM-013",
+        "BM-023",
+        "BM-EXP-009",
+        "BM-EXP-015",
+        "BM-EXP-023",
+        "BM-EXP-026",
+        "BM-EXP-035"
+      ]
+    },
+    "calibration_method": "validation_fitted_temperature_scaling",
+    "posthoc_calibration_method": "temperature_scaling",
+    "posthoc_temperature": 0.5,
+    "calibration_validation_count": 14,
+    "calibration_temperature_at_lower_bound": true,
+    "calibration_temperature_bounds": [
+      0.5,
+      5.0
+    ],
+    "validation_metrics_before_calibration": {
+      "accuracy": 0.9286,
+      "macro_precision": 0.8889,
+      "macro_recall": 0.9667,
+      "macro_f1": 0.9158,
+      "weighted_f1": 0.9338,
+      "expected_calibration_error": 0.3322,
+      "brier_score": 0.2287,
+      "negative_log_likelihood": 0.4863,
+      "macro_pr_auc": 1.0,
+      "confusion_matrix": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          9,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "per_class": {
+        "SUPPORTED": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 2
+        },
+        "CONTRADICTED": {
+          "precision": 1.0,
+          "recall": 0.9,
+          "f1": 0.9474,
+          "support": 10
+        },
+        "UNVERIFIED": {
+          "precision": 0.6667,
+          "recall": 1.0,
+          "f1": 0.8,
+          "support": 2
+        }
+      }
+    },
+    "validation_metrics_after_calibration": {
+      "accuracy": 0.9286,
+      "macro_precision": 0.8889,
+      "macro_recall": 0.9667,
+      "macro_f1": 0.9158,
+      "weighted_f1": 0.9338,
+      "expected_calibration_error": 0.1539,
+      "brier_score": 0.1227,
+      "negative_log_likelihood": 0.2866,
+      "macro_pr_auc": 1.0,
+      "confusion_matrix": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          9,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "per_class": {
+        "SUPPORTED": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 2
+        },
+        "CONTRADICTED": {
+          "precision": 1.0,
+          "recall": 0.9,
+          "f1": 0.9474,
+          "support": 10
+        },
+        "UNVERIFIED": {
+          "precision": 0.6667,
+          "recall": 1.0,
+          "f1": 0.8,
+          "support": 2
+        }
+      }
+    },
+    "abstention_threshold": 0.0,
+    "target_selective_risk": 0.1,
+    "selected_abstention_threshold": 0.0,
+    "validation_selective_operating_point": {
+      "coverage": 1.0,
+      "risk": 0.07142857142857142,
+      "accepted_count": 14,
+      "target_risk": 0.1
+    }
+  },
+  "baseline_comparison": {
+    "heuristic_baseline": {
+      "accuracy": 0.7143,
+      "macro_precision": 0.7524,
+      "macro_recall": 0.7778,
+      "macro_f1": 0.6648,
+      "weighted_f1": 0.6915,
+      "expected_calibration_error": 0.2784,
+      "brier_score": 0.4895,
+      "negative_log_likelihood": 0.8929,
+      "macro_pr_auc": 0.8591,
+      "confusion_matrix": [
+        [
+          6,
+          0,
+          0
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "per_class": {
+        "SUPPORTED": {
+          "precision": 0.8571,
+          "recall": 1.0,
+          "f1": 0.9231,
+          "support": 6
+        },
+        "CONTRADICTED": {
+          "precision": 1.0,
+          "recall": 0.3333,
+          "f1": 0.5,
+          "support": 6
+        },
+        "UNVERIFIED": {
+          "precision": 0.4,
+          "recall": 1.0,
+          "f1": 0.5714,
+          "support": 2
+        }
+      }
+    },
+    "nli_only_rule_baseline": {
+      "accuracy": 0.7143,
+      "macro_precision": 0.75,
+      "macro_recall": 0.7778,
+      "macro_f1": 0.6746,
+      "weighted_f1": 0.6769,
+      "expected_calibration_error": 0.2778,
+      "brier_score": 0.4882,
+      "negative_log_likelihood": 0.8913,
+      "macro_pr_auc": 0.8406,
+      "confusion_matrix": [
+        [
+          6,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "per_class": {
+        "SUPPORTED": {
+          "precision": 0.75,
+          "recall": 1.0,
+          "f1": 0.8571,
+          "support": 6
+        },
+        "CONTRADICTED": {
+          "precision": 1.0,
+          "recall": 0.3333,
+          "f1": 0.5,
+          "support": 6
+        },
+        "UNVERIFIED": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "support": 2
+        }
+      }
+    },
+    "logistic_regression_baseline": {
+      "accuracy": 0.8571,
+      "macro_precision": 0.9167,
+      "macro_recall": 0.8889,
+      "macro_f1": 0.8857,
+      "weighted_f1": 0.8531,
+      "expected_calibration_error": 0.1469,
+      "brier_score": 0.1428,
+      "negative_log_likelihood": 0.219,
+      "macro_pr_auc": 1.0,
+      "confusion_matrix": [
+        [
+          6,
+          0,
+          0
+        ],
+        [
+          2,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "per_class": {
+        "SUPPORTED": {
+          "precision": 0.75,
+          "recall": 1.0,
+          "f1": 0.8571,
+          "support": 6
+        },
+        "CONTRADICTED": {
+          "precision": 1.0,
+          "recall": 0.6667,
+          "f1": 0.8,
+          "support": 6
+        },
+        "UNVERIFIED": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 2
+        }
+      }
+    },
+    "proposed_model": {
+      "accuracy": 0.7857,
+      "macro_precision": 0.8889,
+      "macro_recall": 0.8333,
+      "macro_f1": 0.8222,
+      "weighted_f1": 0.7714,
+      "expected_calibration_error": 0.2013,
+      "brier_score": 0.2814,
+      "negative_log_likelihood": 0.4685,
+      "macro_pr_auc": 1.0,
+      "confusion_matrix": [
+        [
+          6,
+          0,
+          0
+        ],
+        [
+          3,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "per_class": {
+        "SUPPORTED": {
+          "precision": 0.6667,
+          "recall": 1.0,
+          "f1": 0.8,
+          "support": 6
+        },
+        "CONTRADICTED": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6667,
+          "support": 6
+        },
+        "UNVERIFIED": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 2
+        }
+      }
+    },
+    "f1_improvement_vs_heuristic": 0.1574,
+    "accuracy_improvement_vs_heuristic": 0.0714
+  },
+  "validation_metrics": {
+    "accuracy": 0.9286,
+    "macro_precision": 0.8889,
+    "macro_recall": 0.9667,
+    "macro_f1": 0.9158,
+    "weighted_f1": 0.9338,
+    "expected_calibration_error": 0.1539,
+    "brier_score": 0.1227,
+    "negative_log_likelihood": 0.2866,
+    "macro_pr_auc": 1.0,
+    "confusion_matrix": [
+      [
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        9,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ]
+    ],
+    "per_class": {
+      "SUPPORTED": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 2
+      },
+      "CONTRADICTED": {
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1": 0.9474,
+        "support": 10
+      },
+      "UNVERIFIED": {
+        "precision": 0.6667,
+        "recall": 1.0,
+        "f1": 0.8,
+        "support": 2
+      }
+    }
+  },
+  "test_metrics": {
+    "accuracy": 0.7857,
+    "macro_precision": 0.8889,
+    "macro_recall": 0.8333,
+    "macro_f1": 0.8222,
+    "weighted_f1": 0.7714,
+    "expected_calibration_error": 0.2013,
+    "brier_score": 0.2814,
+    "negative_log_likelihood": 0.4685,
+    "macro_pr_auc": 1.0,
+    "confusion_matrix": [
+      [
+        6,
+        0,
+        0
+      ],
+      [
+        3,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        2
+      ]
+    ],
+    "per_class": {
+      "SUPPORTED": {
+        "precision": 0.6667,
+        "recall": 1.0,
+        "f1": 0.8,
+        "support": 6
+      },
+      "CONTRADICTED": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6667,
+        "support": 6
+      },
+      "UNVERIFIED": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 2
+      }
+    }
+  },
+  "selective_metrics": {
+    "threshold_selected_on_validation": 0.0,
+    "coverage": 1.0,
+    "accepted_count": 14,
+    "total_count": 14,
+    "selective_risk": 0.21428571428571427,
+    "accuracy": 0.7857142857142857,
+    "accepted_count_by_class": {
+      "SUPPORTED": 6,
+      "CONTRADICTED": 6,
+      "UNVERIFIED": 2
+    },
+    "accepted_coverage_by_class": {
+      "SUPPORTED": 1.0,
+      "CONTRADICTED": 1.0,
+      "UNVERIFIED": 1.0
+    },
+    "aurc": 0.037040495
+  },
+  "risk_coverage_curve": [
+    {
+      "coverage": 0.1429,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 2,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.1429,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 2,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.1429,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 2,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.2143,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 3,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.2143,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 3,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.2143,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 3,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.2143,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 3,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.2857,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 4,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.2857,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 4,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.2857,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 4,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.2857,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 4,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.3571,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 5,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.3571,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 5,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.3571,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 5,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.4286,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 6,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.4286,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 6,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.4286,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 6,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.4286,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 6,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.5,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 7,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.5,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 7,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.5,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 7,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.5,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 7,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.5714,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 8,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.5714,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 8,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.5714,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 8,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.5714,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 8,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.6429,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 9,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.6429,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 9,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.6429,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 9,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.6429,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 9,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.7143,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 10,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.7143,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 10,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.7143,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 10,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.7143,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 10,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.7857,
+      "selective_risk": 0.0909,
+      "selective_accuracy": 0.9091,
+      "accepted_count": 11,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.7857,
+      "selective_risk": 0.0909,
+      "selective_accuracy": 0.9091,
+      "accepted_count": 11,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.7857,
+      "selective_risk": 0.0909,
+      "selective_accuracy": 0.9091,
+      "accepted_count": 11,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.7857,
+      "selective_risk": 0.0909,
+      "selective_accuracy": 0.9091,
+      "accepted_count": 11,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.8571,
+      "selective_risk": 0.1667,
+      "selective_accuracy": 0.8333,
+      "accepted_count": 12,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.8571,
+      "selective_risk": 0.1667,
+      "selective_accuracy": 0.8333,
+      "accepted_count": 12,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.8571,
+      "selective_risk": 0.1667,
+      "selective_accuracy": 0.8333,
+      "accepted_count": 12,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.8571,
+      "selective_risk": 0.1667,
+      "selective_accuracy": 0.8333,
+      "accepted_count": 12,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.9286,
+      "selective_risk": 0.1538,
+      "selective_accuracy": 0.8462,
+      "accepted_count": 13,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.9286,
+      "selective_risk": 0.1538,
+      "selective_accuracy": 0.8462,
+      "accepted_count": 13,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.9286,
+      "selective_risk": 0.1538,
+      "selective_accuracy": 0.8462,
+      "accepted_count": 13,
+      "total_count": 14
+    },
+    {
+      "coverage": 0.9286,
+      "selective_risk": 0.1538,
+      "selective_accuracy": 0.8462,
+      "accepted_count": 13,
+      "total_count": 14
+    },
+    {
+      "coverage": 1.0,
+      "selective_risk": 0.2143,
+      "selective_accuracy": 0.7857,
+      "accepted_count": 14,
+      "total_count": 14
+    },
+    {
+      "coverage": 1.0,
+      "selective_risk": 0.2143,
+      "selective_accuracy": 0.7857,
+      "accepted_count": 14,
+      "total_count": 14
+    },
+    {
+      "coverage": 1.0,
+      "selective_risk": 0.2143,
+      "selective_accuracy": 0.7857,
+      "accepted_count": 14,
+      "total_count": 14
+    },
+    {
+      "coverage": 1.0,
+      "selective_risk": 0.2143,
+      "selective_accuracy": 0.7857,
+      "accepted_count": 14,
+      "total_count": 14
+    }
+  ],
+  "validation_predictions": [
+    {
+      "claim_id": "C006-1",
+      "scenario_id": "BM-006",
+      "gold_label": "CONTRADICTED",
+      "predicted_label": "UNVERIFIED",
+      "probabilities": {
+        "SUPPORTED": 0.3958214521408081,
+        "CONTRADICTED": 0.1159515529870987,
+        "UNVERIFIED": 0.4882270097732544
+      }
+    },
+    {
+      "claim_id": "C017-1",
+      "scenario_id": "BM-017",
+      "gold_label": "CONTRADICTED",
+      "predicted_label": "CONTRADICTED",
+      "probabilities": {
+        "SUPPORTED": 0.036161042749881744,
+        "CONTRADICTED": 0.9315100908279419,
+        "UNVERIFIED": 0.03232891485095024
+      }
+    },
+    {
+      "claim_id": "C019-1",
+      "scenario_id": "BM-019",
+      "gold_label": "UNVERIFIED",
+      "predicted_label": "UNVERIFIED",
+      "probabilities": {
+        "SUPPORTED": 0.017619511112570763,
+        "CONTRADICTED": 0.030752697959542274,
+        "UNVERIFIED": 0.9516277313232422
+      }
+    },
+    {
+      "claim_id": "C029-1",
+      "scenario_id": "BM-EXP-004",
+      "gold_label": "CONTRADICTED",
+      "predicted_label": "CONTRADICTED",
+      "probabilities": {
+        "SUPPORTED": 0.04461328685283661,
+        "CONTRADICTED": 0.7378713488578796,
+        "UNVERIFIED": 0.21751537919044495
+      }
+    },
+    {
+      "claim_id": "C029-2",
+      "scenario_id": "BM-EXP-004",
+      "gold_label": "CONTRADICTED",
+      "predicted_label": "CONTRADICTED",
+      "probabilities": {
+        "SUPPORTED": 0.04461328685283661,
+        "CONTRADICTED": 0.7378713488578796,
+        "UNVERIFIED": 0.21751537919044495
+      }
+    },
+    {
+      "claim_id": "C032-1",
+      "scenario_id": "BM-EXP-007",
+      "gold_label": "CONTRADICTED",
+      "predicted_label": "CONTRADICTED",
+      "probabilities": {
+        "SUPPORTED": 0.04461328685283661,
+        "CONTRADICTED": 0.7378713488578796,
+        "UNVERIFIED": 0.21751537919044495
+      }
+    },
+    {
+      "claim_id": "C035-1",
+      "scenario_id": "BM-EXP-010",
+      "gold_label": "CONTRADICTED",
+      "predicted_label": "CONTRADICTED",
+      "probabilities": {
+        "SUPPORTED": 0.03233752027153969,
+        "CONTRADICTED": 0.936123788356781,
+        "UNVERIFIED": 0.03153867647051811
+      }
+    },
+    {
+      "claim_id": "C035-2",
+      "scenario_id": "BM-EXP-010",
+      "gold_label": "CONTRADICTED",
+      "predicted_label": "CONTRADICTED",
+      "probabilities": {
+        "SUPPORTED": 0.030378781259059906,
+        "CONTRADICTED": 0.9415795803070068,
+        "UNVERIFIED": 0.028041573241353035
+      }
+    },
+    {
+      "claim_id": "C046-1",
+      "scenario_id": "BM-EXP-021",
+      "gold_label": "SUPPORTED",
+      "predicted_label": "SUPPORTED",
+      "probabilities": {
+        "SUPPORTED": 0.8985664248466492,
+        "CONTRADICTED": 0.05757167935371399,
+        "UNVERIFIED": 0.04386192560195923
+      }
+    },
+    {
+      "claim_id": "C050-1",
+      "scenario_id": "BM-EXP-025",
+      "gold_label": "SUPPORTED",
+      "predicted_label": "SUPPORTED",
+      "probabilities": {
+        "SUPPORTED": 0.897691547870636,
+        "CONTRADICTED": 0.0580298937857151,
+        "UNVERIFIED": 0.044278472661972046
+      }
+    },
+    {
+      "claim_id": "C055-1",
+      "scenario_id": "BM-EXP-030",
+      "gold_label": "CONTRADICTED",
+      "predicted_label": "CONTRADICTED",
+      "probabilities": {
+        "SUPPORTED": 0.04461328685283661,
+        "CONTRADICTED": 0.7378713488578796,
+        "UNVERIFIED": 0.21751537919044495
+      }
+    },
+    {
+      "claim_id": "C055-2",
+      "scenario_id": "BM-EXP-030",
+      "gold_label": "CONTRADICTED",
+      "predicted_label": "CONTRADICTED",
+      "probabilities": {
+        "SUPPORTED": 0.028254175558686256,
+        "CONTRADICTED": 0.9424518942832947,
+        "UNVERIFIED": 0.02929387055337429
+      }
+    },
+    {
+      "claim_id": "C057-1",
+      "scenario_id": "BM-EXP-032",
+      "gold_label": "CONTRADICTED",
+      "predicted_label": "CONTRADICTED",
+      "probabilities": {
+        "SUPPORTED": 0.03319070488214493,
+        "CONTRADICTED": 0.9311183094978333,
+        "UNVERIFIED": 0.03569099307060242
+      }
+    },
+    {
+      "claim_id": "C112-1",
+      "scenario_id": "BM-EXP-038",
+      "gold_label": "UNVERIFIED",
+      "predicted_label": "UNVERIFIED",
+      "probabilities": {
+        "SUPPORTED": 0.017619501799345016,
+        "CONTRADICTED": 0.030752694234251976,
+        "UNVERIFIED": 0.9516278505325317
+      }
+    }
+  ],
+  "test_predictions": [
+    {
+      "claim_id": "C001-1",
+      "scenario_id": "BM-001",
+      "gold_label": "CONTRADICTED",
+      "predicted_label": "CONTRADICTED",
+      "probabilities": {
+        "SUPPORTED": 0.04461328685283661,
+        "CONTRADICTED": 0.7378713488578796,
+        "UNVERIFIED": 0.21751537919044495
+      }
+    },
+    {
+      "claim_id": "C001-2",
+      "scenario_id": "BM-001",
+      "gold_label": "CONTRADICTED",
+      "predicted_label": "SUPPORTED",
+      "probabilities": {
+        "SUPPORTED": 0.8935115337371826,
+        "CONTRADICTED": 0.06992840766906738,
+        "UNVERIFIED": 0.03656010702252388
+      }
+    },
+    {
+      "claim_id": "C005-1",
+      "scenario_id": "BM-005",
+      "gold_label": "CONTRADICTED",
+      "predicted_label": "SUPPORTED",
+      "probabilities": {
+        "SUPPORTED": 0.7420396208763123,
+        "CONTRADICTED": 0.20637983083724976,
+        "UNVERIFIED": 0.051580604165792465
+      }
+    },
+    {
+      "claim_id": "C010-1",
+      "scenario_id": "BM-010",
+      "gold_label": "SUPPORTED",
+      "predicted_label": "SUPPORTED",
+      "probabilities": {
+        "SUPPORTED": 0.9035000801086426,
+        "CONTRADICTED": 0.05621542036533356,
+        "UNVERIFIED": 0.040284473448991776
+      }
+    },
+    {
+      "claim_id": "C011-1",
+      "scenario_id": "BM-011",
+      "gold_label": "CONTRADICTED",
+      "predicted_label": "CONTRADICTED",
+      "probabilities": {
+        "SUPPORTED": 0.03951529040932655,
+        "CONTRADICTED": 0.9252617359161377,
+        "UNVERIFIED": 0.0352228619158268
+      }
+    },
+    {
+      "claim_id": "C013-1",
+      "scenario_id": "BM-013",
+      "gold_label": "SUPPORTED",
+      "predicted_label": "SUPPORTED",
+      "probabilities": {
+        "SUPPORTED": 0.9007577896118164,
+        "CONTRADICTED": 0.05656701698899269,
+        "UNVERIFIED": 0.04267517849802971
+      }
+    },
+    {
+      "claim_id": "C023-1",
+      "scenario_id": "BM-023",
+      "gold_label": "SUPPORTED",
+      "predicted_label": "SUPPORTED",
+      "probabilities": {
+        "SUPPORTED": 0.90436190366745,
+        "CONTRADICTED": 0.05827447772026062,
+        "UNVERIFIED": 0.03736352548003197
+      }
+    },
+    {
+      "claim_id": "C023-2",
+      "scenario_id": "BM-023",
+      "gold_label": "CONTRADICTED",
+      "predicted_label": "SUPPORTED",
+      "probabilities": {
+        "SUPPORTED": 0.6248514652252197,
+        "CONTRADICTED": 0.3140493631362915,
+        "UNVERIFIED": 0.061099179089069366
+      }
+    },
+    {
+      "claim_id": "C034-1",
+      "scenario_id": "BM-EXP-009",
+      "gold_label": "SUPPORTED",
+      "predicted_label": "SUPPORTED",
+      "probabilities": {
+        "SUPPORTED": 0.9012420773506165,
+        "CONTRADICTED": 0.05647145211696625,
+        "UNVERIFIED": 0.0422864630818367
+      }
+    },
+    {
+      "claim_id": "C034-2",
+      "scenario_id": "BM-EXP-009",
+      "gold_label": "SUPPORTED",
+      "predicted_label": "SUPPORTED",
+      "probabilities": {
+        "SUPPORTED": 0.9014716148376465,
+        "CONTRADICTED": 0.05841466411948204,
+        "UNVERIFIED": 0.04011380672454834
+      }
+    },
+    {
+      "claim_id": "C040-1",
+      "scenario_id": "BM-EXP-015",
+      "gold_label": "UNVERIFIED",
+      "predicted_label": "UNVERIFIED",
+      "probabilities": {
+        "SUPPORTED": 0.017619511112570763,
+        "CONTRADICTED": 0.030752697959542274,
+        "UNVERIFIED": 0.9516277313232422
+      }
+    },
+    {
+      "claim_id": "C048-1",
+      "scenario_id": "BM-EXP-023",
+      "gold_label": "SUPPORTED",
+      "predicted_label": "SUPPORTED",
+      "probabilities": {
+        "SUPPORTED": 0.9001631736755371,
+        "CONTRADICTED": 0.05675926059484482,
+        "UNVERIFIED": 0.04307758808135986
+      }
+    },
+    {
+      "claim_id": "C051-1",
+      "scenario_id": "BM-EXP-026",
+      "gold_label": "CONTRADICTED",
+      "predicted_label": "CONTRADICTED",
+      "probabilities": {
+        "SUPPORTED": 0.029628552496433258,
+        "CONTRADICTED": 0.9393888115882874,
+        "UNVERIFIED": 0.030982570722699165
+      }
+    },
+    {
+      "claim_id": "C060-1",
+      "scenario_id": "BM-EXP-035",
+      "gold_label": "UNVERIFIED",
+      "predicted_label": "UNVERIFIED",
+      "probabilities": {
+        "SUPPORTED": 0.017619501799345016,
+        "CONTRADICTED": 0.030752694234251976,
+        "UNVERIFIED": 0.9516278505325317
+      }
+    }
+  ]
+}
